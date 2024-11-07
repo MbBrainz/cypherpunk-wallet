@@ -1,0 +1,20 @@
+/target
+# Yarn cache and temporary files
+.yarn/cache
+.yarn/unplugged
+.yarn/versions
+.yarn/integrity
+.yarn/requirement-state
+.yarn/ultra-resolve
+.yarn/link
+.yarn/patches
+.yarn/patches/*
+.yarn/patches/.*
+.yarn/patches/**/*
+.yarn/patches/**/.*
+.yarn/patches/**/*
+.yarn/patches/**/.*
+
+# Next.js project files
+.next
+**/node_modules
