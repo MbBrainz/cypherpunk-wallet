@@ -1,6 +1,9 @@
 import { secp256k1 } from "@noble/curves/secp256k1";
 import { keccak_256 } from "@noble/hashes/sha3";
 import { bytesToHex, hexToBytes } from "@noble/hashes/utils";
+import { AES } from '@noble/ciphers/webcrypto/aes';
+import { randomBytes } from '@noble/hashes/utils';
+import { scrypt } from '@noble/hashes/scrypt';
 
 type Address = Uint8Array; // 20 bytes
 type StealthMetaAddress = Uint8Array; // 66 bytes
@@ -138,4 +141,41 @@ function compareBytes(a: Uint8Array, b: Uint8Array): boolean {
     if (a[i] !== b[i]) return false;
   }
   return true;
+}
+
+export async function encryptKeyfile(keyfileJson: string, password: string): Promise<string> {
+  const key = await deriveKeyFromPassword(password);
+  const iv = randomBytes(16);
+  const aes = new AES(key);
+
+  const plaintext = new TextEncoder().encode(keyfileJson);
+  const ciphertext = await aes.encrypt(iv, plaintext);
+
+  // Concatenate IV and ciphertext
+  const result = new Uint8Array(iv.length + ciphertext.length);
+  result.set(iv, 0);
+  result.set(ciphertext, iv.length);
+
+  // Return as base64 string
+  return btoa(String.fromCharCode(...result));
+}
+
+export async function decryptKeyfile(encryptedKeyfileBase64: string, password: string): Promise<string> {
+  const key = await deriveKeyFromPassword(password);
+  const encryptedData = Uint8Array.from(atob(encryptedKeyfileBase64), c => c.charCodeAt(0));
+
+  const iv = encryptedData.slice(0, 16);
+  const ciphertext = encryptedData.slice(16);
+
+  const aes = new AES(key);
+  const plaintext = await aes.decrypt(iv, ciphertext);
+  return new TextDecoder().decode(plaintext);
+}
+
+async function deriveKeyFromPassword(password: string): Promise<Uint8Array> {
+  const passwordBytes = new TextEncoder().encode(password);
+  // Use scrypt for key derivation
+  const salt = new Uint8Array(16); // Use a fixed salt or store it securely
+  const key = await scrypt(passwordBytes, salt, { N: 2 ** 14, r: 8, p: 1, dkLen: 32 });
+  return key;
 }
