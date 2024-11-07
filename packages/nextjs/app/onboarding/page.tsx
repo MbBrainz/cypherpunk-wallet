@@ -5,13 +5,15 @@ import { useState } from 'react';
 import Link from 'next/link';
 import CreateWalletComponent from '../../components/CreateWalletComponent';
 import ImportWalletComponent from '../../components/ImportWalletComponent';
+import type { NextPage } from 'next';
 
 
-export default function HomePage() {
+const OnboardingPage: NextPage = () => {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showImportModal, setShowImportModal] = useState(false);
 
   return (
+
     <div className="flex flex-col items-center justify-center min-h-screen bg-base-200">
       <h1 className="text-5xl font-bold mb-10">Welcome to Cypherpunk Wallet</h1>
       <div className="flex space-x-4">
@@ -66,3 +68,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+export default OnboardingPage;

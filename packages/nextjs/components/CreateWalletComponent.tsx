@@ -1,7 +1,8 @@
+'use client';
 import { useState } from 'react';
 import { generateStealthMetaAddress, encryptKeyfile } from '~~/utils/eth-stealth-addresses/lib';
 import { saveAs } from 'file-saver';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function CreateWalletComponent() {
   const [password, setPassword] = useState('');

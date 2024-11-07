@@ -1,6 +1,8 @@
+'use client';
+
 import { useState } from 'react';
 import { decryptKeyfile } from '~~/utils/eth-stealth-addresses/lib';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function ImportWalletComponent() {
   const [password, setPassword] = useState('');
