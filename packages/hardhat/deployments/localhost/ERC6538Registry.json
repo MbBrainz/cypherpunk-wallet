@@ -1,0 +1,351 @@
+{
+  "address": "0x9A9f2CCfdE556A7E9Ff0848998Aa4a0CFD8863AE",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "ERC6538Registry__InvalidSignature",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "registrant",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newNonce",
+          "type": "uint256"
+        }
+      ],
+      "name": "NonceIncremented",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "registrant",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "schemeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "stealthMetaAddress",
+          "type": "bytes"
+        }
+      ],
+      "name": "StealthMetaAddressSet",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DOMAIN_SEPARATOR",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ERC6538REGISTRY_ENTRY_TYPE_HASH",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "incrementNonce",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "registrant",
+          "type": "address"
+        }
+      ],
+      "name": "nonceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "schemeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "stealthMetaAddress",
+          "type": "bytes"
+        }
+      ],
+      "name": "registerKeys",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "registrant",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "schemeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "stealthMetaAddress",
+          "type": "bytes"
+        }
+      ],
+      "name": "registerKeysOnBehalf",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "registrant",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "schemeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "stealthMetaAddressOf",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x889b5c3972e8ffe9b40a3d352b3de50b0dea0e664177d954c518528107431565",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x9A9f2CCfdE556A7E9Ff0848998Aa4a0CFD8863AE",
+    "transactionIndex": 0,
+    "gasUsed": "642421",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x469124604ebbdf00d9b362076b2223b7782b480fbb9d9e5296bc4e6ac8ef0bc9",
+    "transactionHash": "0x889b5c3972e8ffe9b40a3d352b3de50b0dea0e664177d954c518528107431565",
+    "logs": [],
+    "blockNumber": 30,
+    "cumulativeGasUsed": "642421",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "2a687b416aa1c50d9d67086b20541bde",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"ERC6538Registry__InvalidSignature\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"registrant\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newNonce\",\"type\":\"uint256\"}],\"name\":\"NonceIncremented\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"registrant\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"schemeId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"stealthMetaAddress\",\"type\":\"bytes\"}],\"name\":\"StealthMetaAddressSet\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DOMAIN_SEPARATOR\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ERC6538REGISTRY_ENTRY_TYPE_HASH\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"incrementNonce\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"registrant\",\"type\":\"address\"}],\"name\":\"nonceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"schemeId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"stealthMetaAddress\",\"type\":\"bytes\"}],\"name\":\"registerKeys\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"registrant\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"schemeId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"stealthMetaAddress\",\"type\":\"bytes\"}],\"name\":\"registerKeysOnBehalf\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"registrant\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"schemeId\",\"type\":\"uint256\"}],\"name\":\"stealthMetaAddressOf\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"NonceIncremented(address,uint256)\":{\"params\":{\"newNonce\":\"The new nonce value.\",\"registrant\":\"The account that incremented the nonce.\"}},\"StealthMetaAddressSet(address,uint256,bytes)\":{\"params\":{\"registrant\":\"The account that registered the stealth meta-address.\",\"schemeId\":\"Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.\",\"stealthMetaAddress\":\"The stealth meta-address. [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) bases the format for stealth meta-addresses on [ERC-3770](https://eips.ethereum.org/EIPS/eip-3770) and specifies them as:   st:<shortName>:0x<spendingPubKey>:<viewingPubKey> The chain (`shortName`) is implicit based on the chain the `ERC6538Registry` is deployed on, therefore this `stealthMetaAddress` is just the compressed `spendingPubKey` and `viewingPubKey` concatenated.\"}}},\"kind\":\"dev\",\"methods\":{\"DOMAIN_SEPARATOR()\":{\"details\":\"The domain separator is re-computed if there's a chain fork.\"},\"registerKeys(uint256,bytes)\":{\"params\":{\"schemeId\":\"Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.\",\"stealthMetaAddress\":\"The stealth meta-address to register.\"}},\"registerKeysOnBehalf(address,uint256,bytes,bytes)\":{\"details\":\"Supports both EOA signatures and EIP-1271 signatures.Reverts if the signature is invalid.\",\"params\":{\"registrant\":\"Address of the registrant.\",\"schemeId\":\"Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.\",\"signature\":\"A signature from the `registrant` authorizing the registration.\",\"stealthMetaAddress\":\"The stealth meta-address to register.\"}}},\"stateVariables\":{\"nonceOf\":{\"details\":\"`registrant` is the user address.`nonce` will be incremented after each valid `registerKeysOnBehalf` call.\"},\"stealthMetaAddressOf\":{\"details\":\"`registrant` may be a standard 160-bit address or any other identifier.`schemeId` is an integer identifier for the stealth address scheme.\"}},\"version\":1},\"userdoc\":{\"errors\":{\"ERC6538Registry__InvalidSignature()\":[{\"notice\":\"Emitted when an invalid signature is provided to `registerKeysOnBehalf`.\"}]},\"events\":{\"NonceIncremented(address,uint256)\":{\"notice\":\"Emitted when a registrant increments their nonce.\"},\"StealthMetaAddressSet(address,uint256,bytes)\":{\"notice\":\"Emitted when a registrant updates their stealth meta-address.\"}},\"kind\":\"user\",\"methods\":{\"DOMAIN_SEPARATOR()\":{\"notice\":\"Returns the domain separator used in this contract.\"},\"ERC6538REGISTRY_ENTRY_TYPE_HASH()\":{\"notice\":\"The EIP-712 type hash used in `registerKeysOnBehalf`.\"},\"incrementNonce()\":{\"notice\":\"Increments the nonce of the sender to invalidate existing signatures.\"},\"nonceOf(address)\":{\"notice\":\"A nonce used to ensure a signature can only be used once.\"},\"registerKeys(uint256,bytes)\":{\"notice\":\"Sets the caller's stealth meta-address for the given scheme ID.\"},\"registerKeysOnBehalf(address,uint256,bytes,bytes)\":{\"notice\":\"Sets the `registrant`'s stealth meta-address for the given scheme ID.\"},\"stealthMetaAddressOf(address,uint256)\":{\"notice\":\"Next nonce expected from `user` to use when signing for `registerKeysOnBehalf`.\"}},\"notice\":\"`ERC6538Registry` contract to map accounts to their stealth meta-address. See [ERC-6538](https://eips.ethereum.org/EIPS/eip-6538) to learn more.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ERC6538Registry.sol\":\"ERC6538Registry\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/ERC6538Registry.sol\":{\"content\":\"// SPDX-License-Identifier: CC0-1.0\\npragma solidity 0.8.23;\\n\\n/// @notice `ERC6538Registry` contract to map accounts to their stealth meta-address. See\\n/// [ERC-6538](https://eips.ethereum.org/EIPS/eip-6538) to learn more.\\ncontract ERC6538Registry {\\n  /// @notice Emitted when an invalid signature is provided to `registerKeysOnBehalf`.\\n  error ERC6538Registry__InvalidSignature();\\n\\n  /// @notice Next nonce expected from `user` to use when signing for `registerKeysOnBehalf`.\\n  /// @dev `registrant` may be a standard 160-bit address or any other identifier.\\n  /// @dev `schemeId` is an integer identifier for the stealth address scheme.\\n  mapping(address registrant => mapping(uint256 schemeId => bytes)) public stealthMetaAddressOf;\\n\\n  /// @notice A nonce used to ensure a signature can only be used once.\\n  /// @dev `registrant` is the user address.\\n  /// @dev `nonce` will be incremented after each valid `registerKeysOnBehalf` call.\\n  mapping(address registrant => uint256) public nonceOf;\\n\\n  /// @notice The EIP-712 type hash used in `registerKeysOnBehalf`.\\n  bytes32 public constant ERC6538REGISTRY_ENTRY_TYPE_HASH =\\n    keccak256(\\\"Erc6538RegistryEntry(uint256 schemeId,bytes stealthMetaAddress,uint256 nonce)\\\");\\n\\n  /// @notice The chain ID where this contract is initially deployed.\\n  uint256 internal immutable INITIAL_CHAIN_ID;\\n\\n  /// @notice The domain separator used in this contract.\\n  bytes32 internal immutable INITIAL_DOMAIN_SEPARATOR;\\n\\n  /// @notice Emitted when a registrant updates their stealth meta-address.\\n  /// @param registrant The account that registered the stealth meta-address.\\n  /// @param schemeId Identifier corresponding to the applied stealth address scheme, e.g. 1 for\\n  /// secp256k1, as specified in ERC-5564.\\n  /// @param stealthMetaAddress The stealth meta-address.\\n  /// [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) bases the format for stealth\\n  /// meta-addresses on [ERC-3770](https://eips.ethereum.org/EIPS/eip-3770) and specifies them as:\\n  ///   st:<shortName>:0x<spendingPubKey>:<viewingPubKey>\\n  /// The chain (`shortName`) is implicit based on the chain the `ERC6538Registry` is deployed on,\\n  /// therefore this `stealthMetaAddress` is just the compressed `spendingPubKey` and\\n  /// `viewingPubKey` concatenated.\\n  event StealthMetaAddressSet(\\n    address indexed registrant, uint256 indexed schemeId, bytes stealthMetaAddress\\n  );\\n\\n  /// @notice Emitted when a registrant increments their nonce.\\n  /// @param registrant The account that incremented the nonce.\\n  /// @param newNonce The new nonce value.\\n  event NonceIncremented(address indexed registrant, uint256 newNonce);\\n\\n  constructor() {\\n    INITIAL_CHAIN_ID = block.chainid;\\n    INITIAL_DOMAIN_SEPARATOR = _computeDomainSeparator();\\n  }\\n\\n  /// @notice Sets the caller's stealth meta-address for the given scheme ID.\\n  /// @param schemeId Identifier corresponding to the applied stealth address scheme, e.g. 1 for\\n  /// secp256k1, as specified in ERC-5564.\\n  /// @param stealthMetaAddress The stealth meta-address to register.\\n  function registerKeys(uint256 schemeId, bytes calldata stealthMetaAddress) external {\\n    stealthMetaAddressOf[msg.sender][schemeId] = stealthMetaAddress;\\n    emit StealthMetaAddressSet(msg.sender, schemeId, stealthMetaAddress);\\n  }\\n\\n  /// @notice Sets the `registrant`'s stealth meta-address for the given scheme ID.\\n  /// @param registrant Address of the registrant.\\n  /// @param schemeId Identifier corresponding to the applied stealth address scheme, e.g. 1 for\\n  /// secp256k1, as specified in ERC-5564.\\n  /// @param signature A signature from the `registrant` authorizing the registration.\\n  /// @param stealthMetaAddress The stealth meta-address to register.\\n  /// @dev Supports both EOA signatures and EIP-1271 signatures.\\n  /// @dev Reverts if the signature is invalid.\\n  function registerKeysOnBehalf(\\n    address registrant,\\n    uint256 schemeId,\\n    bytes memory signature,\\n    bytes calldata stealthMetaAddress\\n  ) external {\\n    bytes32 dataHash;\\n    address recoveredAddress;\\n\\n    unchecked {\\n      dataHash = keccak256(\\n        abi.encodePacked(\\n          \\\"\\\\x19\\\\x01\\\",\\n          DOMAIN_SEPARATOR(),\\n          keccak256(\\n            abi.encode(\\n              ERC6538REGISTRY_ENTRY_TYPE_HASH,\\n              schemeId,\\n              keccak256(stealthMetaAddress),\\n              nonceOf[registrant]++\\n            )\\n          )\\n        )\\n      );\\n    }\\n\\n    if (signature.length == 65) {\\n      bytes32 r;\\n      bytes32 s;\\n      uint8 v;\\n      assembly (\\\"memory-safe\\\") {\\n        r := mload(add(signature, 0x20))\\n        s := mload(add(signature, 0x40))\\n        v := byte(0, mload(add(signature, 0x60)))\\n      }\\n      recoveredAddress = ecrecover(dataHash, v, r, s);\\n    }\\n\\n    if (\\n      (\\n        (recoveredAddress == address(0) || recoveredAddress != registrant)\\n          && (\\n            IERC1271(registrant).isValidSignature(dataHash, signature)\\n              != IERC1271.isValidSignature.selector\\n          )\\n      )\\n    ) revert ERC6538Registry__InvalidSignature();\\n\\n    stealthMetaAddressOf[registrant][schemeId] = stealthMetaAddress;\\n    emit StealthMetaAddressSet(registrant, schemeId, stealthMetaAddress);\\n  }\\n\\n  /// @notice Increments the nonce of the sender to invalidate existing signatures.\\n  function incrementNonce() external {\\n    unchecked {\\n      nonceOf[msg.sender]++;\\n    }\\n    emit NonceIncremented(msg.sender, nonceOf[msg.sender]);\\n  }\\n\\n  /// @notice Returns the domain separator used in this contract.\\n  /// @dev The domain separator is re-computed if there's a chain fork.\\n  function DOMAIN_SEPARATOR() public view returns (bytes32) {\\n    return block.chainid == INITIAL_CHAIN_ID ? INITIAL_DOMAIN_SEPARATOR : _computeDomainSeparator();\\n  }\\n\\n  /// @notice Computes the domain separator for this contract.\\n  function _computeDomainSeparator() internal view returns (bytes32) {\\n    return keccak256(\\n      abi.encode(\\n        keccak256(\\n          \\\"EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)\\\"\\n        ),\\n        keccak256(\\\"ERC6538Registry\\\"),\\n        keccak256(\\\"1.0\\\"),\\n        block.chainid,\\n        address(this)\\n      )\\n    );\\n  }\\n}\\n\\n/// @notice Interface of the ERC1271 standard signature validation method for contracts as defined\\n/// in https://eips.ethereum.org/EIPS/eip-1271[ERC-1271].\\ninterface IERC1271 {\\n  /// @notice Should return whether the signature provided is valid for the provided data\\n  /// @param hash Hash of the data to be signed\\n  /// @param signature Signature byte array associated with _data\\n  function isValidSignature(bytes32 hash, bytes memory signature)\\n    external\\n    view\\n    returns (bytes4 magicValue);\\n}\\n\",\"keccak256\":\"0x33bb11073945cde45bcc48715d4b4f9367c0299385affa51302414fa8c4be430\",\"license\":\"CC0-1.0\"}},\"version\":1}",
+  "bytecode": "0x60c060405234801561001057600080fd5b50466080526100bd604080517f8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f60208201527f6124ff9f656d31cbb8918f3698282fe3b3527cc4dede357f0fbf535d197bbb7f918101919091527fe6bbd6277e1bf288eed5e8d1780f9a50b239e86b153736bceebccf4ea79d90b360608201524660808201523060a082015260009060c00160405160208183030381529060405280519060200120905090565b60a05260805160a051610a9c6100e5600039600061027a015260006101a50152610a9c6000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063627cdcb91161005b578063627cdcb9146100c55780637aa8b5ad146100cd578063ed2a2d64146100ed578063fe04b1061461010d57600080fd5b8063042c7aa3146100825780633644e51514610097578063428d3d0b146100b2575b600080fd5b610095610090366004610676565b610134565b005b61009f6101a1565b6040519081526020015b60405180910390f35b6100956100c03660046106f4565b61029c565b61009561053d565b6100e06100db3660046107eb565b61058b565b6040516100a9919061085b565b61009f6100fb366004610875565b60016020526000908152604090205481565b61009f7fad167d3025c204a322703b7e9c41f6179d0d174570f484391f50080b960d41d681565b33600090815260208181526040808320868452909152902061015782848361091b565b5082336001600160a01b03167f4e739a47dfa4fd3cfa92f8fe760cebe125565927e5c422cb28e7aa388a067af984846040516101949291906109dc565b60405180910390a3505050565b60007f0000000000000000000000000000000000000000000000000000000000000000461461027757610272604080517f8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f60208201527f6124ff9f656d31cbb8918f3698282fe3b3527cc4dede357f0fbf535d197bbb7f918101919091527fe6bbd6277e1bf288eed5e8d1780f9a50b239e86b153736bceebccf4ea79d90b360608201524660808201523060a082015260009060c00160405160208183030381529060405280519060200120905090565b905090565b507f000000000000000000000000000000000000000000000000000000000000000090565b6000806102a76101a1565b7fad167d3025c204a322703b7e9c41f6179d0d174570f484391f50080b960d41d68786866040516102d9929190610a0b565b604080519182900382206001600160a01b038d16600090815260016020818152939091208054918201905561032a959493919290910193845260208401929092526040830152606082015260800190565b6040516020818303038152906040528051906020012060405160200161036792919061190160f01b81526002810192909252602282015260420190565b60405160208183030381529060405280519060200120915084516041036103f8576020858101516040808801516060808a015183516000808252968101808652899052951a928501839052840183905260808401819052919260019060a0016020604051602081039080840390855afa1580156103e8573d6000803e3d6000fd5b5050506020604051035193505050505b6001600160a01b03811615806104205750866001600160a01b0316816001600160a01b031614155b80156104a55750604051630b135d3f60e11b808252906001600160a01b03891690631626ba7e906104579086908a90600401610a1b565b602060405180830381865afa158015610474573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104989190610a3c565b6001600160e01b03191614155b156104c35760405163c5c2e66160e01b815260040160405180910390fd5b6001600160a01b03871660009081526020818152604080832089845290915290206104ef84868361091b565b5085876001600160a01b03167f4e739a47dfa4fd3cfa92f8fe760cebe125565927e5c422cb28e7aa388a067af9868660405161052c9291906109dc565b60405180910390a350505050505050565b3360008181526001602081815260409283902080549092019182905591519081527fa82a649bbd060c9099cd7b7326e2b0dc9e9af0836480e0f849dc9eaa79710b3b910160405180910390a2565b6000602081815292815260408082209093529081522080546105ac90610890565b80601f01602080910402602001604051908101604052809291908181526020018280546105d890610890565b80156106255780601f106105fa57610100808354040283529160200191610625565b820191906000526020600020905b81548152906001019060200180831161060857829003601f168201915b505050505081565b60008083601f84011261063f57600080fd5b50813567ffffffffffffffff81111561065757600080fd5b60208301915083602082850101111561066f57600080fd5b9250929050565b60008060006040848603121561068b57600080fd5b83359250602084013567ffffffffffffffff8111156106a957600080fd5b6106b58682870161062d565b9497909650939450505050565b80356001600160a01b03811681146106d957600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b60008060008060006080868803121561070c57600080fd5b610715866106c2565b945060208601359350604086013567ffffffffffffffff8082111561073957600080fd5b818801915088601f83011261074d57600080fd5b81358181111561075f5761075f6106de565b604051601f8201601f19908116603f01168101908382118183101715610787576107876106de565b816040528281528b60208487010111156107a057600080fd5b8260208601602083013760006020848301015280975050505060608801359150808211156107cd57600080fd5b506107da8882890161062d565b969995985093965092949392505050565b600080604083850312156107fe57600080fd5b610807836106c2565b946020939093013593505050565b6000815180845260005b8181101561083b5760208185018101518683018201520161081f565b506000602082860101526020601f19601f83011685010191505092915050565b60208152600061086e6020830184610815565b9392505050565b60006020828403121561088757600080fd5b61086e826106c2565b600181811c908216806108a457607f821691505b6020821081036108c457634e487b7160e01b600052602260045260246000fd5b50919050565b601f821115610916576000816000526020600020601f850160051c810160208610156108f35750805b601f850160051c820191505b81811015610912578281556001016108ff565b5050505b505050565b67ffffffffffffffff831115610933576109336106de565b610947836109418354610890565b836108ca565b6000601f84116001811461097b57600085156109635750838201355b600019600387901b1c1916600186901b1783556109d5565b600083815260209020601f19861690835b828110156109ac578685013582556020948501946001909201910161098c565b50868210156109c95760001960f88860031b161c19848701351681555b505060018560011b0183555b5050505050565b60208152816020820152818360408301376000818301604090810191909152601f909201601f19160101919050565b8183823760009101908152919050565b828152604060208201526000610a346040830184610815565b949350505050565b600060208284031215610a4e57600080fd5b81516001600160e01b03198116811461086e57600080fdfea2646970667358221220d8e410ff4b17e43f5d2f72c633be7f17fa4b063974b560422de8f3faa1e584c664736f6c63430008170033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c8063627cdcb91161005b578063627cdcb9146100c55780637aa8b5ad146100cd578063ed2a2d64146100ed578063fe04b1061461010d57600080fd5b8063042c7aa3146100825780633644e51514610097578063428d3d0b146100b2575b600080fd5b610095610090366004610676565b610134565b005b61009f6101a1565b6040519081526020015b60405180910390f35b6100956100c03660046106f4565b61029c565b61009561053d565b6100e06100db3660046107eb565b61058b565b6040516100a9919061085b565b61009f6100fb366004610875565b60016020526000908152604090205481565b61009f7fad167d3025c204a322703b7e9c41f6179d0d174570f484391f50080b960d41d681565b33600090815260208181526040808320868452909152902061015782848361091b565b5082336001600160a01b03167f4e739a47dfa4fd3cfa92f8fe760cebe125565927e5c422cb28e7aa388a067af984846040516101949291906109dc565b60405180910390a3505050565b60007f0000000000000000000000000000000000000000000000000000000000000000461461027757610272604080517f8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f60208201527f6124ff9f656d31cbb8918f3698282fe3b3527cc4dede357f0fbf535d197bbb7f918101919091527fe6bbd6277e1bf288eed5e8d1780f9a50b239e86b153736bceebccf4ea79d90b360608201524660808201523060a082015260009060c00160405160208183030381529060405280519060200120905090565b905090565b507f000000000000000000000000000000000000000000000000000000000000000090565b6000806102a76101a1565b7fad167d3025c204a322703b7e9c41f6179d0d174570f484391f50080b960d41d68786866040516102d9929190610a0b565b604080519182900382206001600160a01b038d16600090815260016020818152939091208054918201905561032a959493919290910193845260208401929092526040830152606082015260800190565b6040516020818303038152906040528051906020012060405160200161036792919061190160f01b81526002810192909252602282015260420190565b60405160208183030381529060405280519060200120915084516041036103f8576020858101516040808801516060808a015183516000808252968101808652899052951a928501839052840183905260808401819052919260019060a0016020604051602081039080840390855afa1580156103e8573d6000803e3d6000fd5b5050506020604051035193505050505b6001600160a01b03811615806104205750866001600160a01b0316816001600160a01b031614155b80156104a55750604051630b135d3f60e11b808252906001600160a01b03891690631626ba7e906104579086908a90600401610a1b565b602060405180830381865afa158015610474573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104989190610a3c565b6001600160e01b03191614155b156104c35760405163c5c2e66160e01b815260040160405180910390fd5b6001600160a01b03871660009081526020818152604080832089845290915290206104ef84868361091b565b5085876001600160a01b03167f4e739a47dfa4fd3cfa92f8fe760cebe125565927e5c422cb28e7aa388a067af9868660405161052c9291906109dc565b60405180910390a350505050505050565b3360008181526001602081815260409283902080549092019182905591519081527fa82a649bbd060c9099cd7b7326e2b0dc9e9af0836480e0f849dc9eaa79710b3b910160405180910390a2565b6000602081815292815260408082209093529081522080546105ac90610890565b80601f01602080910402602001604051908101604052809291908181526020018280546105d890610890565b80156106255780601f106105fa57610100808354040283529160200191610625565b820191906000526020600020905b81548152906001019060200180831161060857829003601f168201915b505050505081565b60008083601f84011261063f57600080fd5b50813567ffffffffffffffff81111561065757600080fd5b60208301915083602082850101111561066f57600080fd5b9250929050565b60008060006040848603121561068b57600080fd5b83359250602084013567ffffffffffffffff8111156106a957600080fd5b6106b58682870161062d565b9497909650939450505050565b80356001600160a01b03811681146106d957600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b60008060008060006080868803121561070c57600080fd5b610715866106c2565b945060208601359350604086013567ffffffffffffffff8082111561073957600080fd5b818801915088601f83011261074d57600080fd5b81358181111561075f5761075f6106de565b604051601f8201601f19908116603f01168101908382118183101715610787576107876106de565b816040528281528b60208487010111156107a057600080fd5b8260208601602083013760006020848301015280975050505060608801359150808211156107cd57600080fd5b506107da8882890161062d565b969995985093965092949392505050565b600080604083850312156107fe57600080fd5b610807836106c2565b946020939093013593505050565b6000815180845260005b8181101561083b5760208185018101518683018201520161081f565b506000602082860101526020601f19601f83011685010191505092915050565b60208152600061086e6020830184610815565b9392505050565b60006020828403121561088757600080fd5b61086e826106c2565b600181811c908216806108a457607f821691505b6020821081036108c457634e487b7160e01b600052602260045260246000fd5b50919050565b601f821115610916576000816000526020600020601f850160051c810160208610156108f35750805b601f850160051c820191505b81811015610912578281556001016108ff565b5050505b505050565b67ffffffffffffffff831115610933576109336106de565b610947836109418354610890565b836108ca565b6000601f84116001811461097b57600085156109635750838201355b600019600387901b1c1916600186901b1783556109d5565b600083815260209020601f19861690835b828110156109ac578685013582556020948501946001909201910161098c565b50868210156109c95760001960f88860031b161c19848701351681555b505060018560011b0183555b5050505050565b60208152816020820152818360408301376000818301604090810191909152601f909201601f19160101919050565b8183823760009101908152919050565b828152604060208201526000610a346040830184610815565b949350505050565b600060208284031215610a4e57600080fd5b81516001600160e01b03198116811461086e57600080fdfea2646970667358221220d8e410ff4b17e43f5d2f72c633be7f17fa4b063974b560422de8f3faa1e584c664736f6c63430008170033",
+  "devdoc": {
+    "events": {
+      "NonceIncremented(address,uint256)": {
+        "params": {
+          "newNonce": "The new nonce value.",
+          "registrant": "The account that incremented the nonce."
+        }
+      },
+      "StealthMetaAddressSet(address,uint256,bytes)": {
+        "params": {
+          "registrant": "The account that registered the stealth meta-address.",
+          "schemeId": "Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.",
+          "stealthMetaAddress": "The stealth meta-address. [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) bases the format for stealth meta-addresses on [ERC-3770](https://eips.ethereum.org/EIPS/eip-3770) and specifies them as:   st:<shortName>:0x<spendingPubKey>:<viewingPubKey> The chain (`shortName`) is implicit based on the chain the `ERC6538Registry` is deployed on, therefore this `stealthMetaAddress` is just the compressed `spendingPubKey` and `viewingPubKey` concatenated."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "DOMAIN_SEPARATOR()": {
+        "details": "The domain separator is re-computed if there's a chain fork."
+      },
+      "registerKeys(uint256,bytes)": {
+        "params": {
+          "schemeId": "Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.",
+          "stealthMetaAddress": "The stealth meta-address to register."
+        }
+      },
+      "registerKeysOnBehalf(address,uint256,bytes,bytes)": {
+        "details": "Supports both EOA signatures and EIP-1271 signatures.Reverts if the signature is invalid.",
+        "params": {
+          "registrant": "Address of the registrant.",
+          "schemeId": "Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.",
+          "signature": "A signature from the `registrant` authorizing the registration.",
+          "stealthMetaAddress": "The stealth meta-address to register."
+        }
+      }
+    },
+    "stateVariables": {
+      "nonceOf": {
+        "details": "`registrant` is the user address.`nonce` will be incremented after each valid `registerKeysOnBehalf` call."
+      },
+      "stealthMetaAddressOf": {
+        "details": "`registrant` may be a standard 160-bit address or any other identifier.`schemeId` is an integer identifier for the stealth address scheme."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "ERC6538Registry__InvalidSignature()": [
+        {
+          "notice": "Emitted when an invalid signature is provided to `registerKeysOnBehalf`."
+        }
+      ]
+    },
+    "events": {
+      "NonceIncremented(address,uint256)": {
+        "notice": "Emitted when a registrant increments their nonce."
+      },
+      "StealthMetaAddressSet(address,uint256,bytes)": {
+        "notice": "Emitted when a registrant updates their stealth meta-address."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "DOMAIN_SEPARATOR()": {
+        "notice": "Returns the domain separator used in this contract."
+      },
+      "ERC6538REGISTRY_ENTRY_TYPE_HASH()": {
+        "notice": "The EIP-712 type hash used in `registerKeysOnBehalf`."
+      },
+      "incrementNonce()": {
+        "notice": "Increments the nonce of the sender to invalidate existing signatures."
+      },
+      "nonceOf(address)": {
+        "notice": "A nonce used to ensure a signature can only be used once."
+      },
+      "registerKeys(uint256,bytes)": {
+        "notice": "Sets the caller's stealth meta-address for the given scheme ID."
+      },
+      "registerKeysOnBehalf(address,uint256,bytes,bytes)": {
+        "notice": "Sets the `registrant`'s stealth meta-address for the given scheme ID."
+      },
+      "stealthMetaAddressOf(address,uint256)": {
+        "notice": "Next nonce expected from `user` to use when signing for `registerKeysOnBehalf`."
+      }
+    },
+    "notice": "`ERC6538Registry` contract to map accounts to their stealth meta-address. See [ERC-6538](https://eips.ethereum.org/EIPS/eip-6538) to learn more.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 51,
+        "contract": "contracts/ERC6538Registry.sol:ERC6538Registry",
+        "label": "stealthMetaAddressOf",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_mapping(t_uint256,t_bytes_storage))"
+      },
+      {
+        "astId": 56,
+        "contract": "contracts/ERC6538Registry.sol:ERC6538Registry",
+        "label": "nonceOf",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bytes_storage": {
+        "encoding": "bytes",
+        "label": "bytes",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_mapping(t_uint256,t_bytes_storage))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(uint256 => bytes))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_uint256,t_bytes_storage)"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_uint256,t_bytes_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => bytes)",
+        "numberOfBytes": "32",
+        "value": "t_bytes_storage"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

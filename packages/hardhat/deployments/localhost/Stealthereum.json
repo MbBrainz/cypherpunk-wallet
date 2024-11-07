@@ -1,0 +1,328 @@
+{
+  "address": "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_announcer",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "ArrayLengthMismatch",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MalformattedMetadata",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NativeTransferFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WrongMsgValue",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "announcer",
+      "outputs": [
+        {
+          "internalType": "contract IERC5564Announcer",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "schemeId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "stealthAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "ephemeralPubkey",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint8",
+              "name": "viewTag",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address[]",
+              "name": "tokens",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "values",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraMetadata",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct IStealthereum.StealthTransfer[]",
+          "name": "transfersData",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "msgvalues",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "batchStealthTransfers",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "msgvalue",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint8",
+          "name": "viewTag",
+          "type": "uint8"
+        },
+        {
+          "internalType": "address[]",
+          "name": "tokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "values",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "extraMetadata",
+          "type": "bytes"
+        }
+      ],
+      "name": "getMetadata",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "metadata",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "metadata",
+          "type": "bytes"
+        }
+      ],
+      "name": "parseMetadata",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "valueETH",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "tokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "values",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "extraDataLen",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "schemeId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "stealthAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "ephemeralPubkey",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint8",
+              "name": "viewTag",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address[]",
+              "name": "tokens",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "values",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraMetadata",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct IStealthereum.StealthTransfer",
+          "name": "transferData",
+          "type": "tuple"
+        }
+      ],
+      "name": "stealthTransfer",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0xe493ad079e59c621e30520f54bdb89bb41a3a349a6da035760a4ff0c013f1146",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c",
+    "transactionIndex": 0,
+    "gasUsed": "963493",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x1c6350790ba7b21f367f4888c844d60617228f4772230d3dcdceeb791c44aaf7",
+    "transactionHash": "0xe493ad079e59c621e30520f54bdb89bb41a3a349a6da035760a4ff0c013f1146",
+    "logs": [],
+    "blockNumber": 33,
+    "cumulativeGasUsed": "963493",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "438892de241e969885cedeeeb80c8021",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.22+commit.4fc1097e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_announcer\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"ArrayLengthMismatch\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"MalformattedMetadata\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NativeTransferFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"WrongMsgValue\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"announcer\",\"outputs\":[{\"internalType\":\"contract IERC5564Announcer\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"schemeId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"stealthAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"ephemeralPubkey\",\"type\":\"bytes\"},{\"internalType\":\"uint8\",\"name\":\"viewTag\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"tokens\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"extraMetadata\",\"type\":\"bytes\"}],\"internalType\":\"struct IStealthereum.StealthTransfer[]\",\"name\":\"transfersData\",\"type\":\"tuple[]\"},{\"internalType\":\"uint256[]\",\"name\":\"msgvalues\",\"type\":\"uint256[]\"}],\"name\":\"batchStealthTransfers\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"msgvalue\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"viewTag\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"tokens\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"extraMetadata\",\"type\":\"bytes\"}],\"name\":\"getMetadata\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"metadata\",\"type\":\"bytes\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"metadata\",\"type\":\"bytes\"}],\"name\":\"parseMetadata\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"valueETH\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"tokens\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"extraDataLen\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"schemeId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"stealthAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"ephemeralPubkey\",\"type\":\"bytes\"},{\"internalType\":\"uint8\",\"name\":\"viewTag\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"tokens\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"extraMetadata\",\"type\":\"bytes\"}],\"internalType\":\"struct IStealthereum.StealthTransfer\",\"name\":\"transferData\",\"type\":\"tuple\"}],\"name\":\"stealthTransfer\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"author\":\"mrs kzg.eth\",\"kind\":\"dev\",\"methods\":{\"batchStealthTransfers((uint256,address,bytes,uint8,address[],uint256[],bytes)[],uint256[])\":{\"details\":\"Caller must approve `values[i]` for each `tokens[i]` contract (in each StealthTransfer) before invoking this function. This function will properly encode metadata on your behalf compying with ERC5564 suggestions.\",\"params\":{\"msgvalues\":\"native transfer amounts per StealthTransfer\",\"transfersData\":\"list of structs containing containing stealth transfer params, see StealthTransfer struct\"}},\"getMetadata(uint256,uint8,address[],uint256[],bytes)\":{\"params\":{\"extraMetadata\":\"any extra data that sender wants to append to the metadata\",\"msgvalue\":\"amount of native eth transferred\",\"tokens\":\"list of token addresses (ERC20 or ERC721)\",\"values\":\"list of values transferred per token\",\"viewTag\":\"view tag for the stealth transfer\"},\"returns\":{\"metadata\":\"the encoded metadata output\"}},\"parseMetadata(bytes)\":{\"details\":\"METADATA SPEC: the first (n)(56)+1 bytes of metadata MUST conform to the following format (where `n` is number of native or token transfers). First byte MUST be a view tag (if no view tag, can be any arbitrary byte but should be 0x00). IF forwarding the native token (e.g. ETH) next 56 bytes MUST be 24 bytes of 0xee + 32 byte uint matching msg.value. Next 56 byte chunks MAY start with 0x23b872dd (transferFrom) to be considered a token transfer. These token transfer 56 byte chunks go 0x23b872dd + 20 byte token address + 32 byte uint of amount/tokenId to transfer. Once the start of a 56 byte chunk does not start with 0x23b872dd, we consider this unstructured appended data.\",\"params\":{\"metadata\":\"the bytes of metadata to parse\"},\"returns\":{\"extraDataLen\":\"length of custom extra data appended to the standard metadata format\",\"tokens\":\"list of token transfers\",\"valueETH\":\"amount of native ETH transferred\",\"values\":\"values transferred in token transfers\"}},\"stealthTransfer((uint256,address,bytes,uint8,address[],uint256[],bytes))\":{\"details\":\"Caller must approve `values[i]` for each `tokens[i]` contract before invoking this function. This function will properly encode metadata on your behalf complying with ERC5564 spec and extending it. Any non-zero msg.value will be transferred to the stealth address too.\",\"params\":{\"transferData\":\"a struct containing stealth transfer params, see StealthTransfer struct\"}}},\"stateVariables\":{\"announcer\":{\"details\":\"chain's canonical ERC5564 announcer singleton contract\"}},\"title\":\"stealth.ereum\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"batchStealthTransfers((uint256,address,bytes,uint8,address[],uint256[],bytes)[],uint256[])\":{\"notice\":\"stealth transfers to multiple stealth addresses in one batched call\"},\"getMetadata(uint256,uint8,address[],uint256[],bytes)\":{\"notice\":\"encode metadata from the list of transfers and any \\\"extra\\\" appended metadata\"},\"parseMetadata(bytes)\":{\"notice\":\"parse metadata to check for valid formatting and what transfers it encodes\"},\"stealthTransfer((uint256,address,bytes,uint8,address[],uint256[],bytes))\":{\"notice\":\"stealth transfer native token and/or any number of ERC20 / ERC721 tokens directly to a stealth address on announcement to chain's ERC5564Announcer\"}},\"notice\":\"ERC5564 compliant stealth addresses integration with an extended metadata standard\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Stealthereum.sol\":\"Stealthereum\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Stealthereum.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.22;\\n\\nimport {IERC5564Announcer} from \\\"./interfaces/IERC5564Announcer.sol\\\";\\nimport {IToken} from \\\"./interfaces/IToken.sol\\\";\\nimport {IStealthereum} from \\\"./interfaces/IStealthereum.sol\\\";\\n\\n/// @title stealth.ereum\\n/// @author mrs kzg.eth\\n/// @notice ERC5564 compliant stealth addresses integration with an extended metadata standard\\ncontract Stealthereum is IStealthereum {\\n\\n    bytes32 internal constant _ETH_AND_SELECTOR = 0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000;\\n    bytes32 internal constant _TRANSFER_FROM_SELECTOR = 0x23b872dd00000000000000000000000000000000000000000000000000000000;\\n\\n    /// @dev chain's canonical ERC5564 announcer singleton contract\\n    IERC5564Announcer public immutable announcer;\\n\\n    constructor(address _announcer) {\\n        announcer = IERC5564Announcer(_announcer);\\n    }\\n\\n    /// @inheritdoc IStealthereum\\n    function stealthTransfer(\\n        StealthTransfer calldata transferData\\n    ) external payable {\\n        bytes memory metadata = getMetadata(\\n            msg.value,\\n            transferData.viewTag,\\n            transferData.tokens,\\n            transferData.values,\\n            transferData.extraMetadata\\n        );\\n\\n        _doTransfers(\\n            msg.value,\\n            msg.sender,\\n            transferData.stealthAddress,\\n            transferData.tokens,\\n            transferData.values\\n        );\\n\\n        announcer.announce(\\n            transferData.schemeId,\\n            transferData.stealthAddress, \\n            transferData.ephemeralPubkey, \\n            metadata\\n        );\\n    }\\n\\n    /// @inheritdoc IStealthereum\\n    function batchStealthTransfers(\\n        StealthTransfer[] calldata transfersData,\\n        uint256[] calldata msgvalues\\n    ) external payable {\\n        uint256 len = transfersData.length;\\n        if (msgvalues.length != len) revert ArrayLengthMismatch();\\n        uint256 startValue = msg.value;\\n        uint256 endValue;\\n        for (uint256 i; i < len; i++) {\\n            bytes memory metadata = getMetadata(\\n                msgvalues[i],\\n                transfersData[i].viewTag,\\n                transfersData[i].tokens,\\n                transfersData[i].values,\\n                transfersData[i].extraMetadata\\n            );\\n\\n            _doTransfers(\\n                msgvalues[i],\\n                msg.sender,\\n                transfersData[i].stealthAddress,\\n                transfersData[i].tokens,\\n                transfersData[i].values\\n            );\\n\\n            announcer.announce(\\n                transfersData[i].schemeId,\\n                transfersData[i].stealthAddress, \\n                transfersData[i].ephemeralPubkey, \\n                metadata\\n            );\\n\\n            endValue += msgvalues[i];\\n        }\\n\\n        if (endValue != startValue) revert WrongMsgValue();\\n    }\\n\\n    /// @inheritdoc IStealthereum\\n    function parseMetadata(\\n        bytes memory metadata\\n    ) external pure returns (uint256 valueETH, address[] memory tokens, uint256[] memory values, uint256 extraDataLen) {\\n        uint256 len = metadata.length;\\n        if (len < 57) revert MalformattedMetadata();\\n        \\n        bytes32 checkSelector;\\n        assembly {\\n            checkSelector := shl(0x40, shr(0x40, mload(add(metadata, 0x21))))\\n        }\\n\\n        bool sendsETH = checkSelector == _ETH_AND_SELECTOR;\\n        if (sendsETH) {\\n            assembly {\\n                valueETH := mload(add(metadata, 0x39))\\n            }\\n        }\\n\\n        uint256 n = (len - 1)/56;\\n        uint256 arrayLen;\\n        if (n > 1 || !sendsETH) {\\n            assembly {\\n                let startPtr := add(metadata, 0x59)\\n                let max := sub(n, 0x01)\\n                if iszero(sendsETH) {\\n                    max := n\\n                    startPtr := add(metadata, 0x21)\\n                }\\n                for {let i := 0x00} lt(i, max) {i := add(i, 0x01)} {\\n                    switch eq(shl(0xe0, shr(0xe0, mload(add(startPtr, mul(i, 0x38))))), _TRANSFER_FROM_SELECTOR)\\n                    case 0 {\\n                        break\\n                    }\\n                    default {\\n                        arrayLen := add(arrayLen, 0x01)\\n                    }\\n                }\\n                let tFree := mload(0x40)\\n                let tDataPtr := add(tFree, 0x20)\\n                let vFree := add(tDataPtr, mul(arrayLen, 0x20))\\n                let vDataPtr := add(vFree, 0x20)\\n                let tStartPtr := add(startPtr, 0x04)\\n                let vStartPtr := add(startPtr, 0x18)\\n                mstore(tFree, arrayLen)\\n                mstore(vFree, arrayLen)\\n                for {let j := 0x00} lt(j, arrayLen) {j := add(j, 0x01)} {\\n                    mstore(add(tDataPtr, mul(j, 0x20)), shr(0x60, mload(add(tStartPtr, mul(j, 0x38)))))\\n                    mstore(add(vDataPtr, mul(j, 0x20)), mload(add(vStartPtr, mul(j, 0x38))))\\n                }\\n\\n                tokens := tFree\\n                values := vFree\\n\\n                mstore(0x40, add(tFree, add(mul(arrayLen, 0x40), 0x40))) // update free memory pointer\\n            }\\n        }\\n\\n        uint256 start = sendsETH ? 57+arrayLen*56 : 1+arrayLen*56;\\n        extraDataLen = metadata.length - start;\\n    }\\n\\n    /// @inheritdoc IStealthereum\\n    function getMetadata(\\n        uint256 msgvalue,\\n        uint8 viewTag,\\n        address[] calldata tokens,\\n        uint256[] calldata values,\\n        bytes memory extraMetadata\\n    ) public pure returns (bytes memory metadata) {\\n        uint256 len = tokens.length;\\n        if (len != values.length) revert ArrayLengthMismatch();\\n\\n        bool sendsETH = msgvalue > 0;\\n        uint256 metadataLen = sendsETH ? 56*(len+1)+1 : 56*len+1;\\n        bytes memory data = new bytes(metadataLen);\\n\\n        assembly {\\n            let startPtr := add(data, 0x21)\\n            let n := div(sub(metadataLen, 0x01), 0x38)\\n            mstore8(add(data, 0x20), viewTag)\\n            if gt(sendsETH, 0) {\\n                mstore(add(data, 0x21), _ETH_AND_SELECTOR)\\n                mstore(add(data, 0x39), msgvalue)\\n\\n                startPtr := add(data, 0x59)\\n                n := sub(n, 0x01)\\n            }\\n            for {let i := 0x00} lt(i, n) {i := add(i, 0x01)} {\\n                let k := add(startPtr, mul(i, 0x38))\\n                mstore(k, _TRANSFER_FROM_SELECTOR)\\n                calldatacopy(0x00, add(tokens.offset, mul(i, 0x20)), 0x20)\\n                calldatacopy(0x20, add(values.offset, mul(i, 0x20)), 0x20)\\n                mstore(add(k, 0x04), shl(0x60, mload(0x00)))\\n                mstore(add(k, 0x18), mload(0x20))\\n            }\\n        }\\n\\n        metadata = bytes.concat(data, extraMetadata);\\n    }\\n\\n    function _doTransfers(\\n        uint256 msgvalue,\\n        address msgsender,\\n        address stealthAddress,\\n        address[] memory tokens,\\n        uint256[] memory values\\n    ) internal {\\n        for (uint256 i = 0; i < tokens.length; i++) {\\n            IToken(tokens[i]).transferFrom(msgsender, stealthAddress, values[i]);\\n        }\\n\\n        if (msgvalue > 0) {\\n            bool success;\\n            assembly {\\n                success := call(gas(), stealthAddress, msgvalue, 0, 0, 0, 0)\\n            }\\n            if (!success) revert NativeTransferFailed();\\n        }\\n    }\\n\\n    receive() external payable {}\\n}\",\"keccak256\":\"0x7bd82b2168c9cc6d1f4081f8bee9334830fb917bf3f2fc01b096f2c3247d934e\",\"license\":\"MIT\"},\"contracts/interfaces/IERC5564Announcer.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.22;\\n\\n/// NOTE very slight adaptation to code found here https://eips.ethereum.org/EIPS/eip-5564\\n\\n/// @notice Interface for announcing when something is sent to a stealth address.\\ninterface IERC5564Announcer {\\n  /// @dev Emitted when sending something to a stealth address.\\n  /// @dev See the `announce` method for documentation on the parameters.\\n  event Announcement (\\n    uint256 indexed schemeId, \\n    address indexed stealthAddress, \\n    address indexed caller, \\n    bytes ephemeralPubKey, \\n    bytes metadata\\n  );\\n\\n  /// @dev Called by integrators to emit an `Announcement` event.\\n  /// @param schemeId The integer specifying the applied stealth address scheme.\\n  /// @param stealthAddress The computed stealth address for the recipient.\\n  /// @param ephemeralPubKey Ephemeral public key used by the sender.\\n  /// @param metadata An arbitrary field MUST include the view tag in the first byte.\\n  /// Besides the view tag, the metadata can be used by the senders however they like, \\n  /// but the below guidelines are recommended:\\n  /// The first byte of the metadata MUST be the view tag.\\n  /// - When sending/interacting with the native token of the blockchain (cf. ETH), the metadata SHOULD be structured as follows:\\n  ///     - Byte 1 MUST be the view tag, as specified above.\\n  ///     - Bytes 2-5 are `0xeeeeeeee`\\n  ///     - Bytes 6-25 are the address 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE.\\n  ///     - Bytes 26-57 are the amount of ETH being sent.\\n  /// - When interacting with ERC-20/ERC-721/etc. tokens, the metadata SHOULD be structured as follows:\\n  ///   - Byte 1 MUST be the view tag, as specified above.\\n  ///   - Bytes 2-5 are a function identifier. When a function selector (e.g.\\n  ///     the first (left, high-order in big-endian) four bytes of the Keccak-256\\n  ///     hash of the signature of the function, like Solidity and Vyper use) is\\n  ///     available, it MUST be used.\\n  ///   - Bytes 6-25 are the token contract address.\\n  ///   - Bytes 26-57 are the amount of tokens being sent/interacted with for fungible tokens, or\\n  ///     the token ID for non-fungible tokens.\\n  function announce (\\n    uint256 schemeId, \\n    address stealthAddress, \\n    bytes memory ephemeralPubKey, \\n    bytes memory metadata\\n  ) external;\\n}\",\"keccak256\":\"0x694b047c5dac5fb5490e4b7c9357b96e903d3c6de506982e8266ab64e14d09c5\",\"license\":\"MIT\"},\"contracts/interfaces/IStealthereum.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.22;\\n\\ninterface IStealthereum {\\n\\n    error WrongMsgValue();\\n    error MalformattedMetadata();\\n    error NativeTransferFailed();\\n    error ArrayLengthMismatch();\\n\\n    /// @notice The StealthTransfer struct\\n    /// @param schemeId id for the stealth address cryptographic scheme (1 = secp256k1 with view tags)\\n    /// @param stealthAddress the stealth address to transfer to\\n    /// @param ephemeralPubkey the ephemeral pubkey used to create the stealth address (and used by recipient to find the private key)\\n    /// @param viewTag the view tag for quicker scanning\\n    /// @param tokens list of tokens to transfer to the stealth address (supports both ERC20 and ERC721)\\n    /// @param values the amount (or tokenId, in the case of ERC721) to transfer per token address\\n    /// @param extraMetadata any extra data to append to the metadata\\n    struct StealthTransfer {\\n        uint256 schemeId; \\n        address stealthAddress;\\n        bytes ephemeralPubkey;\\n        uint8 viewTag;\\n        address[] tokens;\\n        uint256[] values;\\n        bytes extraMetadata;\\n    }\\n\\n    /// @notice stealth transfer native token and/or any number of ERC20 / ERC721 tokens directly to a stealth address on announcement to chain's ERC5564Announcer\\n    /// @param transferData a struct containing stealth transfer params, see StealthTransfer struct\\n    /// @dev Caller must approve `values[i]` for each `tokens[i]` contract before invoking this function.\\n    /// This function will properly encode metadata on your behalf complying with ERC5564 spec and extending it.\\n    /// Any non-zero msg.value will be transferred to the stealth address too.\\n    function stealthTransfer(\\n        StealthTransfer calldata transferData\\n    ) external payable;\\n\\n    /// @notice stealth transfers to multiple stealth addresses in one batched call\\n    /// @param transfersData list of structs containing containing stealth transfer params, see StealthTransfer struct\\n    /// @param msgvalues native transfer amounts per StealthTransfer\\n    /// @dev Caller must approve `values[i]` for each `tokens[i]` contract (in each StealthTransfer) before invoking this function.\\n    /// This function will properly encode metadata on your behalf compying with ERC5564 suggestions.\\n    function batchStealthTransfers(\\n        StealthTransfer[] calldata transfersData,\\n        uint256[] calldata msgvalues\\n    ) external payable;\\n\\n    /// @notice parse metadata to check for valid formatting and what transfers it encodes\\n    /// @param metadata the bytes of metadata to parse\\n    /// @return valueETH amount of native ETH transferred\\n    /// @return tokens list of token transfers\\n    /// @return values values transferred in token transfers\\n    /// @return extraDataLen length of custom extra data appended to the standard metadata format\\n    /// @dev METADATA SPEC: the first (n)(56)+1 bytes of metadata MUST conform to the following format (where `n` is number of native or token transfers).\\n    /// First byte MUST be a view tag (if no view tag, can be any arbitrary byte but should be 0x00).\\n    /// IF forwarding the native token (e.g. ETH) next 56 bytes MUST be 24 bytes of 0xee + 32 byte uint matching msg.value.\\n    /// Next 56 byte chunks MAY start with 0x23b872dd (transferFrom) to be considered a token transfer.\\n    /// These token transfer 56 byte chunks go 0x23b872dd + 20 byte token address + 32 byte uint of amount/tokenId to transfer.\\n    /// Once the start of a 56 byte chunk does not start with 0x23b872dd, we consider this unstructured appended data.\\n    function parseMetadata(\\n        bytes memory metadata\\n    ) external pure returns (uint256 valueETH, address[] memory tokens, uint256[] memory values, uint256 extraDataLen);\\n\\n    /// @notice encode metadata from the list of transfers and any \\\"extra\\\" appended metadata\\n    /// @param msgvalue amount of native eth transferred\\n    /// @param viewTag view tag for the stealth transfer\\n    /// @param tokens list of token addresses (ERC20 or ERC721)\\n    /// @param values list of values transferred per token\\n    /// @param extraMetadata any extra data that sender wants to append to the metadata\\n    /// @return metadata the encoded metadata output\\n    function getMetadata(\\n        uint256 msgvalue,\\n        uint8 viewTag,\\n        address[] calldata tokens,\\n        uint256[] calldata values,\\n        bytes memory extraMetadata\\n    ) external pure returns (bytes memory metadata);\\n}\",\"keccak256\":\"0xe24c3301cfb38df529887b7de6714ac865a0966b9f1289090052ceb548986b83\",\"license\":\"MIT\"},\"contracts/interfaces/IToken.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.22;\\n\\ninterface IToken {\\n    function transferFrom(address, address, uint256) external;\\n\\n    function balanceOf(address) external returns (uint256);\\n\\n    function approve(address, uint256) external;\\n}\",\"keccak256\":\"0xe57d037b73ef7658550f1348f67f34f926aaecc0239305ec065e3b0024d095e6\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a060405234801561001057600080fd5b5060405161110938038061110983398101604081905261002f91610040565b6001600160a01b0316608052610070565b60006020828403121561005257600080fd5b81516001600160a01b038116811461006957600080fd5b9392505050565b60805161107161009860003960008181606c015281816106e401526108f301526110716000f3fe60806040526004361061004e5760003560e01c80631d5a897f1461005a57806349f9e0b2146100ab57806375f2a9f8146100d85780638d0185fb14610108578063a4df161c1461011d57600080fd5b3661005557005b600080fd5b34801561006657600080fd5b5061008e7f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b0390911681526020015b60405180910390f35b3480156100b757600080fd5b506100cb6100c6366004610b93565b610130565b6040516100a29190610c91565b3480156100e457600080fd5b506100f86100f3366004610cab565b6102ae565b6040516100a29493929190610ce8565b61011b610116366004610d7f565b610462565b005b61011b61012b366004610deb565b610849565b6060848381146101535760405163512509d360e11b815260040160405180910390fd5b88151560008161017857610168836038610e3c565b610173906001610e59565b610199565b610183836001610e59565b61018e906038610e3c565b610199906001610e59565b905060008167ffffffffffffffff8111156101b6576101b6610af0565b6040519080825280601f01601f1916602001820160405280156101e0576020820181803683370190505b50905060218101603860018403048c6020840153841561022d577777777777777777777777777777777777777777777777777760411b6021840152603983018e9052605983019150600019015b60005b81811015610278576038810283016323b872dd60e01b815260208083028f0160003760208083028d0160203760005160601b6004820152602051601890910152600101610230565b505050808660405160200161028e929190610e6c565b604051602081830303815290604052945050505050979650505050505050565b60006060806000808551905060398110156102dc57604051630dbcb94b60e01b815260040160405180910390fd5b602186015167ffffffffffffffff19167777777777777777777777777777777777777777777777777760411b8114801561031857603988015196505b60006038610327600186610e9b565b6103319190610eae565b905060006001821180610342575082155b1561040c5760598a01600183038461035c57505060218a01825b60005b818110156103a157603881028301516001600160e01b0319166323b872dd60e01b14801561039257600185019450610398565b506103a1565b5060010161035f565b505060405160208101602084028101602081016004850160188601955086855286835260005b878110156103f557603881028281015160601c602083028781019190915290880151908401526001016103c7565b5050506040858102840181019052919a5090985050505b60008361042e5761041e826038610e3c565b610429906001610e59565b610444565b610439826038610e3c565b610444906039610e59565b9050808b516104539190610e9b565b96505050505050509193509193565b828181146104835760405163512509d360e11b815260040160405180910390fd5b346000805b8381101561081f5760006105b38787848181106104a7576104a7610ed0565b905060200201358a8a858181106104c0576104c0610ed0565b90506020028101906104d29190610ee6565b6104e3906080810190606001610f06565b8b8b868181106104f5576104f5610ed0565b90506020028101906105079190610ee6565b610515906080810190610f21565b8d8d8881811061052757610527610ed0565b90506020028101906105399190610ee6565b6105479060a0810190610f21565b8f8f8a81811061055957610559610ed0565b905060200281019061056b9190610ee6565b6105799060c0810190610f6b565b8080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525061013092505050565b90506106e28787848181106105ca576105ca610ed0565b90506020020135338b8b868181106105e4576105e4610ed0565b90506020028101906105f69190610ee6565b610607906040810190602001610fb2565b8c8c8781811061061957610619610ed0565b905060200281019061062b9190610ee6565b610639906080810190610f21565b80806020026020016040519081016040528093929190818152602001838360200280828437600081840152601f19601f820116905080830192505050505050508d8d8881811061068b5761068b610ed0565b905060200281019061069d9190610ee6565b6106ab9060a0810190610f21565b8080602002602001604051908101604052809392919081815260200183836020028082843760009201919091525061098e92505050565b7f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316634d1f95838a8a8581811061072357610723610ed0565b90506020028101906107359190610ee6565b358b8b8681811061074857610748610ed0565b905060200281019061075a9190610ee6565b61076b906040810190602001610fb2565b8c8c8781811061077d5761077d610ed0565b905060200281019061078f9190610ee6565b61079d906040810190610f6b565b866040518663ffffffff1660e01b81526004016107be959493929190610fdb565b600060405180830381600087803b1580156107d857600080fd5b505af11580156107ec573d6000803e3d6000fd5b5050505086868381811061080257610802610ed0565b90506020020135836108149190610e59565b925050600101610488565b5081811461084057604051633bf87c3160e11b815260040160405180910390fd5b50505050505050565b60006108863461085f6080850160608601610f06565b61086c6080860186610f21565b61087960a0880188610f21565b61057960c08a018a610f6b565b90506108e9343361089d6040860160208701610fb2565b6108aa6080870187610f21565b808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152506106ab9250505060a0880188610f21565b6001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016634d1f9583833561092a6040860160208701610fb2565b6109376040870187610f6b565b866040518663ffffffff1660e01b8152600401610958959493929190610fdb565b600060405180830381600087803b15801561097257600080fd5b505af1158015610986573d6000803e3d6000fd5b505050505050565b60005b8251811015610a54578281815181106109ac576109ac610ed0565b60200260200101516001600160a01b03166323b872dd86868585815181106109d6576109d6610ed0565b60209081029190910101516040516001600160e01b031960e086901b1681526001600160a01b0393841660048201529290911660248301526044820152606401600060405180830381600087803b158015610a3057600080fd5b505af1158015610a44573d6000803e3d6000fd5b5050600190920191506109919050565b508415610a8757600080600080600089885af190508061098657604051633d2cec6f60e21b815260040160405180910390fd5b5050505050565b803560ff81168114610a9f57600080fd5b919050565b60008083601f840112610ab657600080fd5b50813567ffffffffffffffff811115610ace57600080fd5b6020830191508360208260051b8501011115610ae957600080fd5b9250929050565b634e487b7160e01b600052604160045260246000fd5b600082601f830112610b1757600080fd5b813567ffffffffffffffff80821115610b3257610b32610af0565b604051601f8301601f19908116603f01168101908282118183101715610b5a57610b5a610af0565b81604052838152866020858801011115610b7357600080fd5b836020870160208301376000602085830101528094505050505092915050565b600080600080600080600060a0888a031215610bae57600080fd5b87359650610bbe60208901610a8e565b9550604088013567ffffffffffffffff80821115610bdb57600080fd5b610be78b838c01610aa4565b909750955060608a0135915080821115610c0057600080fd5b610c0c8b838c01610aa4565b909550935060808a0135915080821115610c2557600080fd5b50610c328a828b01610b06565b91505092959891949750929550565b60005b83811015610c5c578181015183820152602001610c44565b50506000910152565b60008151808452610c7d816020860160208601610c41565b601f01601f19169290920160200192915050565b602081526000610ca46020830184610c65565b9392505050565b600060208284031215610cbd57600080fd5b813567ffffffffffffffff811115610cd457600080fd5b610ce084828501610b06565b949350505050565b600060808201868352602060808185015281875180845260a086019150828901935060005b81811015610d325784516001600160a01b031683529383019391830191600101610d0d565b50508481036040860152865180825290820192508187019060005b81811015610d6957825185529383019391830191600101610d4d565b5050505060609290920192909252949350505050565b60008060008060408587031215610d9557600080fd5b843567ffffffffffffffff80821115610dad57600080fd5b610db988838901610aa4565b90965094506020870135915080821115610dd257600080fd5b50610ddf87828801610aa4565b95989497509550505050565b600060208284031215610dfd57600080fd5b813567ffffffffffffffff811115610e1457600080fd5b820160e08185031215610ca457600080fd5b634e487b7160e01b600052601160045260246000fd5b8082028115828204841417610e5357610e53610e26565b92915050565b80820180821115610e5357610e53610e26565b60008351610e7e818460208801610c41565b835190830190610e92818360208801610c41565b01949350505050565b81810381811115610e5357610e53610e26565b600082610ecb57634e487b7160e01b600052601260045260246000fd5b500490565b634e487b7160e01b600052603260045260246000fd5b6000823560de19833603018112610efc57600080fd5b9190910192915050565b600060208284031215610f1857600080fd5b610ca482610a8e565b6000808335601e19843603018112610f3857600080fd5b83018035915067ffffffffffffffff821115610f5357600080fd5b6020019150600581901b3603821315610ae957600080fd5b6000808335601e19843603018112610f8257600080fd5b83018035915067ffffffffffffffff821115610f9d57600080fd5b602001915036819003821315610ae957600080fd5b600060208284031215610fc457600080fd5b81356001600160a01b0381168114610ca457600080fd5b8581526001600160a01b03851660208201526080604082018190528101839052828460a0830137600060a084830101526000601f19601f850116820160a083820301606084015261102f60a0820185610c65565b9897505050505050505056fea26469706673582212209dfc881939dfe282b4d0ab81286614abb806551a550f98ae4d7d86b42e8cab9664736f6c63430008160033",
+  "deployedBytecode": "0x60806040526004361061004e5760003560e01c80631d5a897f1461005a57806349f9e0b2146100ab57806375f2a9f8146100d85780638d0185fb14610108578063a4df161c1461011d57600080fd5b3661005557005b600080fd5b34801561006657600080fd5b5061008e7f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b0390911681526020015b60405180910390f35b3480156100b757600080fd5b506100cb6100c6366004610b93565b610130565b6040516100a29190610c91565b3480156100e457600080fd5b506100f86100f3366004610cab565b6102ae565b6040516100a29493929190610ce8565b61011b610116366004610d7f565b610462565b005b61011b61012b366004610deb565b610849565b6060848381146101535760405163512509d360e11b815260040160405180910390fd5b88151560008161017857610168836038610e3c565b610173906001610e59565b610199565b610183836001610e59565b61018e906038610e3c565b610199906001610e59565b905060008167ffffffffffffffff8111156101b6576101b6610af0565b6040519080825280601f01601f1916602001820160405280156101e0576020820181803683370190505b50905060218101603860018403048c6020840153841561022d577777777777777777777777777777777777777777777777777760411b6021840152603983018e9052605983019150600019015b60005b81811015610278576038810283016323b872dd60e01b815260208083028f0160003760208083028d0160203760005160601b6004820152602051601890910152600101610230565b505050808660405160200161028e929190610e6c565b604051602081830303815290604052945050505050979650505050505050565b60006060806000808551905060398110156102dc57604051630dbcb94b60e01b815260040160405180910390fd5b602186015167ffffffffffffffff19167777777777777777777777777777777777777777777777777760411b8114801561031857603988015196505b60006038610327600186610e9b565b6103319190610eae565b905060006001821180610342575082155b1561040c5760598a01600183038461035c57505060218a01825b60005b818110156103a157603881028301516001600160e01b0319166323b872dd60e01b14801561039257600185019450610398565b506103a1565b5060010161035f565b505060405160208101602084028101602081016004850160188601955086855286835260005b878110156103f557603881028281015160601c602083028781019190915290880151908401526001016103c7565b5050506040858102840181019052919a5090985050505b60008361042e5761041e826038610e3c565b610429906001610e59565b610444565b610439826038610e3c565b610444906039610e59565b9050808b516104539190610e9b565b96505050505050509193509193565b828181146104835760405163512509d360e11b815260040160405180910390fd5b346000805b8381101561081f5760006105b38787848181106104a7576104a7610ed0565b905060200201358a8a858181106104c0576104c0610ed0565b90506020028101906104d29190610ee6565b6104e3906080810190606001610f06565b8b8b868181106104f5576104f5610ed0565b90506020028101906105079190610ee6565b610515906080810190610f21565b8d8d8881811061052757610527610ed0565b90506020028101906105399190610ee6565b6105479060a0810190610f21565b8f8f8a81811061055957610559610ed0565b905060200281019061056b9190610ee6565b6105799060c0810190610f6b565b8080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525061013092505050565b90506106e28787848181106105ca576105ca610ed0565b90506020020135338b8b868181106105e4576105e4610ed0565b90506020028101906105f69190610ee6565b610607906040810190602001610fb2565b8c8c8781811061061957610619610ed0565b905060200281019061062b9190610ee6565b610639906080810190610f21565b80806020026020016040519081016040528093929190818152602001838360200280828437600081840152601f19601f820116905080830192505050505050508d8d8881811061068b5761068b610ed0565b905060200281019061069d9190610ee6565b6106ab9060a0810190610f21565b8080602002602001604051908101604052809392919081815260200183836020028082843760009201919091525061098e92505050565b7f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316634d1f95838a8a8581811061072357610723610ed0565b90506020028101906107359190610ee6565b358b8b8681811061074857610748610ed0565b905060200281019061075a9190610ee6565b61076b906040810190602001610fb2565b8c8c8781811061077d5761077d610ed0565b905060200281019061078f9190610ee6565b61079d906040810190610f6b565b866040518663ffffffff1660e01b81526004016107be959493929190610fdb565b600060405180830381600087803b1580156107d857600080fd5b505af11580156107ec573d6000803e3d6000fd5b5050505086868381811061080257610802610ed0565b90506020020135836108149190610e59565b925050600101610488565b5081811461084057604051633bf87c3160e11b815260040160405180910390fd5b50505050505050565b60006108863461085f6080850160608601610f06565b61086c6080860186610f21565b61087960a0880188610f21565b61057960c08a018a610f6b565b90506108e9343361089d6040860160208701610fb2565b6108aa6080870187610f21565b808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152506106ab9250505060a0880188610f21565b6001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016634d1f9583833561092a6040860160208701610fb2565b6109376040870187610f6b565b866040518663ffffffff1660e01b8152600401610958959493929190610fdb565b600060405180830381600087803b15801561097257600080fd5b505af1158015610986573d6000803e3d6000fd5b505050505050565b60005b8251811015610a54578281815181106109ac576109ac610ed0565b60200260200101516001600160a01b03166323b872dd86868585815181106109d6576109d6610ed0565b60209081029190910101516040516001600160e01b031960e086901b1681526001600160a01b0393841660048201529290911660248301526044820152606401600060405180830381600087803b158015610a3057600080fd5b505af1158015610a44573d6000803e3d6000fd5b5050600190920191506109919050565b508415610a8757600080600080600089885af190508061098657604051633d2cec6f60e21b815260040160405180910390fd5b5050505050565b803560ff81168114610a9f57600080fd5b919050565b60008083601f840112610ab657600080fd5b50813567ffffffffffffffff811115610ace57600080fd5b6020830191508360208260051b8501011115610ae957600080fd5b9250929050565b634e487b7160e01b600052604160045260246000fd5b600082601f830112610b1757600080fd5b813567ffffffffffffffff80821115610b3257610b32610af0565b604051601f8301601f19908116603f01168101908282118183101715610b5a57610b5a610af0565b81604052838152866020858801011115610b7357600080fd5b836020870160208301376000602085830101528094505050505092915050565b600080600080600080600060a0888a031215610bae57600080fd5b87359650610bbe60208901610a8e565b9550604088013567ffffffffffffffff80821115610bdb57600080fd5b610be78b838c01610aa4565b909750955060608a0135915080821115610c0057600080fd5b610c0c8b838c01610aa4565b909550935060808a0135915080821115610c2557600080fd5b50610c328a828b01610b06565b91505092959891949750929550565b60005b83811015610c5c578181015183820152602001610c44565b50506000910152565b60008151808452610c7d816020860160208601610c41565b601f01601f19169290920160200192915050565b602081526000610ca46020830184610c65565b9392505050565b600060208284031215610cbd57600080fd5b813567ffffffffffffffff811115610cd457600080fd5b610ce084828501610b06565b949350505050565b600060808201868352602060808185015281875180845260a086019150828901935060005b81811015610d325784516001600160a01b031683529383019391830191600101610d0d565b50508481036040860152865180825290820192508187019060005b81811015610d6957825185529383019391830191600101610d4d565b5050505060609290920192909252949350505050565b60008060008060408587031215610d9557600080fd5b843567ffffffffffffffff80821115610dad57600080fd5b610db988838901610aa4565b90965094506020870135915080821115610dd257600080fd5b50610ddf87828801610aa4565b95989497509550505050565b600060208284031215610dfd57600080fd5b813567ffffffffffffffff811115610e1457600080fd5b820160e08185031215610ca457600080fd5b634e487b7160e01b600052601160045260246000fd5b8082028115828204841417610e5357610e53610e26565b92915050565b80820180821115610e5357610e53610e26565b60008351610e7e818460208801610c41565b835190830190610e92818360208801610c41565b01949350505050565b81810381811115610e5357610e53610e26565b600082610ecb57634e487b7160e01b600052601260045260246000fd5b500490565b634e487b7160e01b600052603260045260246000fd5b6000823560de19833603018112610efc57600080fd5b9190910192915050565b600060208284031215610f1857600080fd5b610ca482610a8e565b6000808335601e19843603018112610f3857600080fd5b83018035915067ffffffffffffffff821115610f5357600080fd5b6020019150600581901b3603821315610ae957600080fd5b6000808335601e19843603018112610f8257600080fd5b83018035915067ffffffffffffffff821115610f9d57600080fd5b602001915036819003821315610ae957600080fd5b600060208284031215610fc457600080fd5b81356001600160a01b0381168114610ca457600080fd5b8581526001600160a01b03851660208201526080604082018190528101839052828460a0830137600060a084830101526000601f19601f850116820160a083820301606084015261102f60a0820185610c65565b9897505050505050505056fea26469706673582212209dfc881939dfe282b4d0ab81286614abb806551a550f98ae4d7d86b42e8cab9664736f6c63430008160033",
+  "devdoc": {
+    "author": "mrs kzg.eth",
+    "kind": "dev",
+    "methods": {
+      "batchStealthTransfers((uint256,address,bytes,uint8,address[],uint256[],bytes)[],uint256[])": {
+        "details": "Caller must approve `values[i]` for each `tokens[i]` contract (in each StealthTransfer) before invoking this function. This function will properly encode metadata on your behalf compying with ERC5564 suggestions.",
+        "params": {
+          "msgvalues": "native transfer amounts per StealthTransfer",
+          "transfersData": "list of structs containing containing stealth transfer params, see StealthTransfer struct"
+        }
+      },
+      "getMetadata(uint256,uint8,address[],uint256[],bytes)": {
+        "params": {
+          "extraMetadata": "any extra data that sender wants to append to the metadata",
+          "msgvalue": "amount of native eth transferred",
+          "tokens": "list of token addresses (ERC20 or ERC721)",
+          "values": "list of values transferred per token",
+          "viewTag": "view tag for the stealth transfer"
+        },
+        "returns": {
+          "metadata": "the encoded metadata output"
+        }
+      },
+      "parseMetadata(bytes)": {
+        "details": "METADATA SPEC: the first (n)(56)+1 bytes of metadata MUST conform to the following format (where `n` is number of native or token transfers). First byte MUST be a view tag (if no view tag, can be any arbitrary byte but should be 0x00). IF forwarding the native token (e.g. ETH) next 56 bytes MUST be 24 bytes of 0xee + 32 byte uint matching msg.value. Next 56 byte chunks MAY start with 0x23b872dd (transferFrom) to be considered a token transfer. These token transfer 56 byte chunks go 0x23b872dd + 20 byte token address + 32 byte uint of amount/tokenId to transfer. Once the start of a 56 byte chunk does not start with 0x23b872dd, we consider this unstructured appended data.",
+        "params": {
+          "metadata": "the bytes of metadata to parse"
+        },
+        "returns": {
+          "extraDataLen": "length of custom extra data appended to the standard metadata format",
+          "tokens": "list of token transfers",
+          "valueETH": "amount of native ETH transferred",
+          "values": "values transferred in token transfers"
+        }
+      },
+      "stealthTransfer((uint256,address,bytes,uint8,address[],uint256[],bytes))": {
+        "details": "Caller must approve `values[i]` for each `tokens[i]` contract before invoking this function. This function will properly encode metadata on your behalf complying with ERC5564 spec and extending it. Any non-zero msg.value will be transferred to the stealth address too.",
+        "params": {
+          "transferData": "a struct containing stealth transfer params, see StealthTransfer struct"
+        }
+      }
+    },
+    "stateVariables": {
+      "announcer": {
+        "details": "chain's canonical ERC5564 announcer singleton contract"
+      }
+    },
+    "title": "stealth.ereum",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "batchStealthTransfers((uint256,address,bytes,uint8,address[],uint256[],bytes)[],uint256[])": {
+        "notice": "stealth transfers to multiple stealth addresses in one batched call"
+      },
+      "getMetadata(uint256,uint8,address[],uint256[],bytes)": {
+        "notice": "encode metadata from the list of transfers and any \"extra\" appended metadata"
+      },
+      "parseMetadata(bytes)": {
+        "notice": "parse metadata to check for valid formatting and what transfers it encodes"
+      },
+      "stealthTransfer((uint256,address,bytes,uint8,address[],uint256[],bytes))": {
+        "notice": "stealth transfer native token and/or any number of ERC20 / ERC721 tokens directly to a stealth address on announcement to chain's ERC5564Announcer"
+      }
+    },
+    "notice": "ERC5564 compliant stealth addresses integration with an extended metadata standard",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

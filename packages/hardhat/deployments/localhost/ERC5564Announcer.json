@@ -1,0 +1,138 @@
+{
+  "address": "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "schemeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "stealthAddress",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "ephemeralPubKey",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "metadata",
+          "type": "bytes"
+        }
+      ],
+      "name": "Announcement",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "schemeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "stealthAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "ephemeralPubKey",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "metadata",
+          "type": "bytes"
+        }
+      ],
+      "name": "announce",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x663a3ecf757d5456feb2a0593d75a65332606eee401d1dc4c73768658a1d98fd",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
+    "transactionIndex": 0,
+    "gasUsed": "188449",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x3430c555b6ee2590b469dc0fb64e0e8db96e11f978b353807e15d7c925293d88",
+    "transactionHash": "0x663a3ecf757d5456feb2a0593d75a65332606eee401d1dc4c73768658a1d98fd",
+    "logs": [],
+    "blockNumber": 28,
+    "cumulativeGasUsed": "188449",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "2a687b416aa1c50d9d67086b20541bde",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"schemeId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"stealthAddress\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"ephemeralPubKey\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"metadata\",\"type\":\"bytes\"}],\"name\":\"Announcement\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"schemeId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"stealthAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"ephemeralPubKey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"metadata\",\"type\":\"bytes\"}],\"name\":\"announce\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Announcement(uint256,address,address,bytes,bytes)\":{\"details\":\"The remaining metadata can be used by the senders however they like. See [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) for recommendations on how to structure this metadata.\",\"params\":{\"caller\":\"The caller of the `announce` function that emitted this event.\",\"ephemeralPubKey\":\"Ephemeral public key used by the sender to derive the `stealthAddress`.\",\"metadata\":\"Arbitrary data to emit with the event. The first byte MUST be the view tag.\",\"schemeId\":\"Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.\",\"stealthAddress\":\"The computed stealth address for the recipient.\"}}},\"kind\":\"dev\",\"methods\":{\"announce(uint256,address,bytes,bytes)\":{\"details\":\"The remaining metadata can be used by the senders however they like. See [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) for recommendations on how to structure this metadata.\",\"params\":{\"ephemeralPubKey\":\"Ephemeral public key used by the sender.\",\"metadata\":\"Arbitrary data to emit with the event. The first byte MUST be the view tag.\",\"schemeId\":\"Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.\",\"stealthAddress\":\"The computed stealth address for the recipient.\"}}},\"version\":1},\"userdoc\":{\"events\":{\"Announcement(uint256,address,address,bytes,bytes)\":{\"notice\":\"Emitted when something is sent to a stealth address.\"}},\"kind\":\"user\",\"methods\":{\"announce(uint256,address,bytes,bytes)\":{\"notice\":\"Called by integrators to emit an `Announcement` event.\"}},\"notice\":\"`ERC5564Announcer` contract to emit an `Announcement` event to broadcast information about a transaction involving a stealth address. See [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) to learn more.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ERC5564Announcer.sol\":\"ERC5564Announcer\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/ERC5564Announcer.sol\":{\"content\":\"// SPDX-License-Identifier: CC0-1.0\\npragma solidity 0.8.23;\\n\\n/// @notice `ERC5564Announcer` contract to emit an `Announcement` event to broadcast information\\n/// about a transaction involving a stealth address. See\\n/// [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) to learn more.\\ncontract ERC5564Announcer {\\n  /// @notice Emitted when something is sent to a stealth address.\\n  /// @param schemeId Identifier corresponding to the applied stealth address scheme, e.g. 1 for\\n  /// secp256k1, as specified in ERC-5564.\\n  /// @param stealthAddress The computed stealth address for the recipient.\\n  /// @param caller The caller of the `announce` function that emitted this event.\\n  /// @param ephemeralPubKey Ephemeral public key used by the sender to derive the `stealthAddress`.\\n  /// @param metadata Arbitrary data to emit with the event. The first byte MUST be the view tag.\\n  /// @dev The remaining metadata can be used by the senders however they like. See\\n  /// [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) for recommendations on how to structure\\n  /// this metadata.\\n  event Announcement(\\n    uint256 indexed schemeId,\\n    address indexed stealthAddress,\\n    address indexed caller,\\n    bytes ephemeralPubKey,\\n    bytes metadata\\n  );\\n\\n  /// @notice Called by integrators to emit an `Announcement` event.\\n  /// @param schemeId Identifier corresponding to the applied stealth address scheme, e.g. 1 for\\n  /// secp256k1, as specified in ERC-5564.\\n  /// @param stealthAddress The computed stealth address for the recipient.\\n  /// @param ephemeralPubKey Ephemeral public key used by the sender.\\n  /// @param metadata Arbitrary data to emit with the event. The first byte MUST be the view tag.\\n  /// @dev The remaining metadata can be used by the senders however they like. See\\n  /// [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) for recommendations on how to structure\\n  /// this metadata.\\n  function announce(\\n    uint256 schemeId,\\n    address stealthAddress,\\n    bytes memory ephemeralPubKey,\\n    bytes memory metadata\\n  ) external {\\n    emit Announcement(schemeId, stealthAddress, msg.sender, ephemeralPubKey, metadata);\\n  }\\n}\\n\",\"keccak256\":\"0x6a971bffb4365354419710dbcdc298853f018d4b5d334280adc005cb2730cdca\",\"license\":\"CC0-1.0\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610272806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80634d1f958314610030575b600080fd5b61004361003e36600461013c565b610045565b005b336001600160a01b0316836001600160a01b0316857f5f0eab8057630ba7676c49b4f21a0231414e79474595be8e4c432fbf6bf0f4e7858560405161008b92919061020e565b60405180910390a450505050565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126100c057600080fd5b813567ffffffffffffffff808211156100db576100db610099565b604051601f8301601f19908116603f0116810190828211818310171561010357610103610099565b8160405283815286602085880101111561011c57600080fd5b836020870160208301376000602085830101528094505050505092915050565b6000806000806080858703121561015257600080fd5b8435935060208501356001600160a01b038116811461017057600080fd5b9250604085013567ffffffffffffffff8082111561018d57600080fd5b610199888389016100af565b935060608701359150808211156101af57600080fd5b506101bc878288016100af565b91505092959194509250565b6000815180845260005b818110156101ee576020818501810151868301820152016101d2565b506000602082860101526020601f19601f83011685010191505092915050565b60408152600061022160408301856101c8565b828103602084015261023381856101c8565b9594505050505056fea264697066735822122040731f32656b7e32cb1517409cdac02abb7a838a1d98955c2fc344ec0bb2af4e64736f6c63430008170033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80634d1f958314610030575b600080fd5b61004361003e36600461013c565b610045565b005b336001600160a01b0316836001600160a01b0316857f5f0eab8057630ba7676c49b4f21a0231414e79474595be8e4c432fbf6bf0f4e7858560405161008b92919061020e565b60405180910390a450505050565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126100c057600080fd5b813567ffffffffffffffff808211156100db576100db610099565b604051601f8301601f19908116603f0116810190828211818310171561010357610103610099565b8160405283815286602085880101111561011c57600080fd5b836020870160208301376000602085830101528094505050505092915050565b6000806000806080858703121561015257600080fd5b8435935060208501356001600160a01b038116811461017057600080fd5b9250604085013567ffffffffffffffff8082111561018d57600080fd5b610199888389016100af565b935060608701359150808211156101af57600080fd5b506101bc878288016100af565b91505092959194509250565b6000815180845260005b818110156101ee576020818501810151868301820152016101d2565b506000602082860101526020601f19601f83011685010191505092915050565b60408152600061022160408301856101c8565b828103602084015261023381856101c8565b9594505050505056fea264697066735822122040731f32656b7e32cb1517409cdac02abb7a838a1d98955c2fc344ec0bb2af4e64736f6c63430008170033",
+  "devdoc": {
+    "events": {
+      "Announcement(uint256,address,address,bytes,bytes)": {
+        "details": "The remaining metadata can be used by the senders however they like. See [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) for recommendations on how to structure this metadata.",
+        "params": {
+          "caller": "The caller of the `announce` function that emitted this event.",
+          "ephemeralPubKey": "Ephemeral public key used by the sender to derive the `stealthAddress`.",
+          "metadata": "Arbitrary data to emit with the event. The first byte MUST be the view tag.",
+          "schemeId": "Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.",
+          "stealthAddress": "The computed stealth address for the recipient."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "announce(uint256,address,bytes,bytes)": {
+        "details": "The remaining metadata can be used by the senders however they like. See [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) for recommendations on how to structure this metadata.",
+        "params": {
+          "ephemeralPubKey": "Ephemeral public key used by the sender.",
+          "metadata": "Arbitrary data to emit with the event. The first byte MUST be the view tag.",
+          "schemeId": "Identifier corresponding to the applied stealth address scheme, e.g. 1 for secp256k1, as specified in ERC-5564.",
+          "stealthAddress": "The computed stealth address for the recipient."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "Announcement(uint256,address,address,bytes,bytes)": {
+        "notice": "Emitted when something is sent to a stealth address."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "announce(uint256,address,bytes,bytes)": {
+        "notice": "Called by integrators to emit an `Announcement` event."
+      }
+    },
+    "notice": "`ERC5564Announcer` contract to emit an `Announcement` event to broadcast information about a transaction involving a stealth address. See [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) to learn more.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
