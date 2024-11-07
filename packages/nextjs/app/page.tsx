@@ -37,6 +37,7 @@ const Home: NextPage = () => {
   const { writeContractAsync: executeStealthereum } = useScaffoldWriteContract("Stealthereum");
 
   useEffect(() => {
+    console.log({ jell: address, stealthMetaAddress });
     if (address && !isZeroAddress(address)) {
       setStealthMetaAddress(data ?? "");
     } else {
@@ -183,6 +184,7 @@ const Home: NextPage = () => {
 
               {/* Send Button */}
               <button
+                type="button"
                 className="btn btn-primary mt-6"
                 disabled={!address || (!ethAmount && TokenTransfers.length === 0 && !erc721Transfer)}
                 onClick={handleExecuteStealthTransfer}

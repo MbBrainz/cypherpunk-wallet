@@ -1,9 +1,10 @@
+import { gcm } from "@noble/ciphers/aes";
 import { secp256k1 } from "@noble/curves/secp256k1";
+import { scrypt } from "@noble/hashes/scrypt";
 import { keccak_256 } from "@noble/hashes/sha3";
 import { bytesToHex, hexToBytes } from "@noble/hashes/utils";
-import { randomBytes } from '@noble/hashes/utils';
-import { scrypt } from '@noble/hashes/scrypt';
-import { gcm } from '@noble/ciphers/aes';
+import { randomBytes } from "@noble/hashes/utils";
+
 type Address = Uint8Array; // 20 bytes
 type StealthMetaAddress = Uint8Array; // 66 bytes
 type PublicKeyCompressed = Uint8Array; // 33 bytes

@@ -1,11 +1,12 @@
-'use client';
-import { useState } from 'react';
-import { generateStealthMetaAddress, encryptKeyfile } from '~~/utils/eth-stealth-addresses/lib';
-import { saveAs } from 'file-saver';
-import { useRouter } from 'next/navigation';
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { saveAs } from "file-saver";
+import { encryptKeyfile, generateStealthMetaAddress } from "~~/utils/eth-stealth-addresses/lib";
 
 export default function CreateWalletComponent() {
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -16,32 +17,30 @@ export default function CreateWalletComponent() {
 
     // Create keyfile object
     const keyfile = {
-      spending_key: Buffer.from(spendingKey).toString('hex'),
-      viewing_key: Buffer.from(viewingKey).toString('hex'),
+      spending_key: Buffer.from(spendingKey).toString("hex"),
+      viewing_key: Buffer.from(viewingKey).toString("hex"),
     };
 
     // Encrypt keyfile with password
     const encryptedKeyfile = await encryptKeyfile(JSON.stringify(keyfile), password);
 
     // Prompt user to download encrypted keyfile
-    const blob = new Blob([encryptedKeyfile], { type: 'text/plain;charset=utf-8' });
-    saveAs(blob, 'cypherpunk-wallet-keyfile.enc');
+    const blob = new Blob([encryptedKeyfile], { type: "text/plain;charset=utf-8" });
+    saveAs(blob, "cypherpunk-wallet-keyfile.enc");
 
     // Store encrypted keyfile in local storage
-    localStorage.setItem('encryptedKeyfile', encryptedKeyfile);
+    localStorage.setItem("encryptedKeyfile", encryptedKeyfile);
 
     setLoading(false);
 
     // Redirect to wallet manager page
-    router.push('/wallet');
+    router.push("/wallet");
   };
 
   return (
     <div>
       <h3 className="font-bold text-lg">Create New Wallet</h3>
-      <p className="py-4">
-        Please create a password to secure your wallet keyfile.
-      </p>
+      <p className="py-4">Please create a password to secure your wallet keyfile.</p>
       <div className="form-control">
         <label className="label">
           <span className="label-text">Password</span>
@@ -50,12 +49,12 @@ export default function CreateWalletComponent() {
           type="password"
           className="input input-bordered"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={e => setPassword(e.target.value)}
         />
       </div>
       <div className="modal-action">
         <button
-          className={`btn btn-primary ${loading ? 'loading' : ''}`}
+          className={`btn btn-primary ${loading ? "loading" : ""}`}
           onClick={handleCreateWallet}
           disabled={!password || loading}
         >

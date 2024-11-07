@@ -47,8 +47,10 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
 
   // registry address
   const registryContract = await hre.ethers.getContract<ERC6538Registry>("ERC6538Registry");
-  // const registryAddress = await registryContract.getAddress();
+  const registryAddress = await registryContract.getAddress();
 
+
+  console.log(`Registering keys for ${STEALH_META_ADDRESS} for ${deployer} on ${registryAddress}`);
   await registryContract.registerKeys(1, STEALH_META_ADDRESS);
 
   // Deploy Stealthereum with the announcer address
