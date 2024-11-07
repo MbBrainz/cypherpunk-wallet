@@ -21,7 +21,7 @@ export const menuLinks: HeaderMenuLink[] = [
   },
   {
     label: "Your Cypherpunk Wallet",
-    href: "/wallet",
+    href: "/onboarding",
   },
   {
     label: "Debug Contracts",

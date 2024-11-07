@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { decryptKeyfile } from '@/utils/eth-stealth-addresses/lib';
+import { decryptKeyfile } from '~~/utils/eth-stealth-addresses/lib';
 import { useRouter } from 'next/router';
 
 export default function ImportWalletComponent() {

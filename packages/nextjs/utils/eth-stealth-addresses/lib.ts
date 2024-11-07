@@ -1,10 +1,9 @@
 import { secp256k1 } from "@noble/curves/secp256k1";
 import { keccak_256 } from "@noble/hashes/sha3";
 import { bytesToHex, hexToBytes } from "@noble/hashes/utils";
-import { AES } from '@noble/ciphers/webcrypto/aes';
 import { randomBytes } from '@noble/hashes/utils';
 import { scrypt } from '@noble/hashes/scrypt';
-
+import { gcm } from '@noble/ciphers/aes';
 type Address = Uint8Array; // 20 bytes
 type StealthMetaAddress = Uint8Array; // 66 bytes
 type PublicKeyCompressed = Uint8Array; // 33 bytes
@@ -146,10 +145,10 @@ function compareBytes(a: Uint8Array, b: Uint8Array): boolean {
 export async function encryptKeyfile(keyfileJson: string, password: string): Promise<string> {
   const key = await deriveKeyFromPassword(password);
   const iv = randomBytes(16);
-  const aes = new AES(key);
 
+  const aes = gcm(key, iv);
   const plaintext = new TextEncoder().encode(keyfileJson);
-  const ciphertext = await aes.encrypt(iv, plaintext);
+  const ciphertext = aes.encrypt(plaintext);
 
   // Concatenate IV and ciphertext
   const result = new Uint8Array(iv.length + ciphertext.length);
@@ -167,8 +166,8 @@ export async function decryptKeyfile(encryptedKeyfileBase64: string, password: s
   const iv = encryptedData.slice(0, 16);
   const ciphertext = encryptedData.slice(16);
 
-  const aes = new AES(key);
-  const plaintext = await aes.decrypt(iv, ciphertext);
+  const aes = gcm(key, iv);
+  const plaintext = aes.decrypt(ciphertext);
   return new TextDecoder().decode(plaintext);
 }
 

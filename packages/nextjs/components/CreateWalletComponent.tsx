@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { generateStealthMetaAddress, encryptKeyfile } from '@/utils/eth-stealth-addresses/lib';
+import { generateStealthMetaAddress, encryptKeyfile } from '~~/utils/eth-stealth-addresses/lib';
 import { saveAs } from 'file-saver';
 import { useRouter } from 'next/router';
 
