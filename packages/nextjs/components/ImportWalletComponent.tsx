@@ -24,21 +24,20 @@ export default function ImportWalletComponent() {
 
   const handleImportWallet = async () => {
     setLoading(true);
-    // Decrypt keyfile with password
     try {
       const decryptedKeyfile = await decryptKeyfile(keyfileContent, password);
       const keyfile = JSON.parse(decryptedKeyfile);
 
       // Store encrypted keyfile in local storage
       localStorage.setItem("encryptedKeyfile", keyfileContent);
-
-      // Store keys in memory or state management
-      // ... code to store keys ...
+      // Store the password temporarily in session storage
+      sessionStorage.setItem("tempWalletPassword", password);
+      // Store an additional flag to indicate we're coming from import
+      sessionStorage.setItem("skipUnlock", "true");
 
       setLoading(false);
-
-      // Redirect to wallet manager page
-      router.push("/wallet");
+      // Route directly to assets, bypassing the wallet layout check
+      router.replace("/wallet");
     } catch (error) {
       alert("Failed to decrypt keyfile. Please check your password.");
       setLoading(false);
