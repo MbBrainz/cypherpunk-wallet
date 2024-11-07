@@ -6,6 +6,8 @@ import type { Log } from "viem";
 import { Address } from "~~/components/scaffold-eth";
 import { useScaffoldEventHistory, useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 import { checkStealthAddressFast, decryptKeyfile } from "~~/utils/eth-stealth-addresses/lib";
+import { useAccount, useBalance } from "wagmi";
+import { formatEther } from "viem";
 
 interface Asset {
   type: "public" | "private";
@@ -46,16 +48,42 @@ export default function WalletPage() {
   const [assets, setAssets] = useState<Asset[]>([]);
   const [stealthTransfers, setStealthTransfers] = useState<StealthTransfer[]>([]);
   const [validStealthTransfers, setValidStealthTransfers] = useState<StealthTransfer[]>([]);
+  const { address } = useAccount();
+  const { data: ethBalance } = useBalance({ address });
+  const [ethPrice, setEthPrice] = useState<number>(0);
 
-  // Check if wallet exists
+  // Check if wallet exists and handle auto-unlock
   useEffect(() => {
     const encryptedKeyfile = localStorage.getItem("encryptedKeyfile");
+    const skipUnlock = sessionStorage.getItem("skipUnlock");
+    const tempPassword = sessionStorage.getItem("tempWalletPassword");
+    
     if (!encryptedKeyfile) {
       router.push("/onboarding");
+      return;
+    }
+
+    // Handle auto-unlock after import
+    if (skipUnlock === "true" && tempPassword) {
+      const handleAutoUnlock = async () => {
+        try {
+          const decrypted = await decryptKeyfile(encryptedKeyfile, tempPassword);
+          setKeyfile(JSON.parse(decrypted));
+          setIsDecrypted(true);
+          // Clear sensitive data from session storage
+          sessionStorage.removeItem("skipUnlock");
+          sessionStorage.removeItem("tempWalletPassword");
+        } catch (error) {
+          console.error("Failed to auto-unlock wallet:", error);
+          localStorage.removeItem("encryptedKeyfile");
+          router.push("/onboarding");
+        }
+      };
+      handleAutoUnlock();
     }
   }, [router]);
 
-  // Handle decryption
+  // Handle manual decryption
   const handleDecrypt = async () => {
     try {
       const encryptedKeyfile = localStorage.getItem("encryptedKeyfile");
@@ -143,6 +171,22 @@ export default function WalletPage() {
     scanStealthTransfers();
   }, [keyfile, stealthTransfers]);
 
+  useEffect(() => {
+    const fetchEthPrice = async () => {
+      try {
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd');
+        const data = await response.json();
+        setEthPrice(data.ethereum.usd);
+      } catch (error) {
+        console.error('Failed to fetch ETH price:', error);
+      }
+    };
+    fetchEthPrice();
+    // Refresh price every 60 seconds
+    const interval = setInterval(fetchEthPrice, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   if (!isDecrypted) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
@@ -172,7 +216,19 @@ export default function WalletPage() {
         <div className="card bg-base-100 shadow-xl">
           <div className="card-body">
             <h2 className="card-title">Public Assets</h2>
-            {/* List public assets */}
+            {ethBalance && (
+              <div className="flex justify-between items-center p-2 border-b">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold">ETH</span>
+                  <span>{parseFloat(formatEther(ethBalance.value)).toFixed(4)}</span>
+                </div>
+                <div className="text-right">
+                  <div className="font-medium">
+                    ${(parseFloat(formatEther(ethBalance.value)) * ethPrice).toFixed(2)}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <div className="card bg-base-100 shadow-xl">
