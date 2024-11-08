@@ -37,13 +37,13 @@ const Home: NextPage = () => {
   const { writeContractAsync: executeStealthereum } = useScaffoldWriteContract("Stealthereum");
 
   useEffect(() => {
-    console.log({ jell: address, stealthMetaAddress });
+    console.log({ jell: address, data });
     if (address && !isZeroAddress(address)) {
       setStealthMetaAddress(data ?? "");
     } else {
       setStealthMetaAddress("");
     }
-  }, [address]);
+  }, [address, data, stealthMetaAddress]);
 
   const handleExecuteStealthTransfer = async () => {
     console.log("execute stealth transfer");

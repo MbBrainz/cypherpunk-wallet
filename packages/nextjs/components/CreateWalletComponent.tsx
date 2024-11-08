@@ -4,11 +4,15 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { saveAs } from "file-saver";
 import { encryptKeyfile, generateStealthMetaAddress } from "~~/utils/eth-stealth-addresses/lib";
+import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
+import { bytesToHex } from "viem";
+import toast from "react-hot-toast";
 
 export default function CreateWalletComponent() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const { writeContractAsync: executeOnRegistry } = useScaffoldWriteContract("ERC6538Registry");
 
   const handleCreateWallet = async () => {
     setLoading(true);
@@ -32,6 +36,20 @@ export default function CreateWalletComponent() {
     localStorage.setItem("encryptedKeyfile", encryptedKeyfile);
 
     setLoading(false);
+
+    // Store stealth meta address in session storage
+    sessionStorage.setItem("stealthMetaAddress", stealthMetaAddress.toString());
+
+    // set the stealth meta address in the registry
+    try {
+      await executeOnRegistry({
+        functionName: "registerKeys",
+        args: [BigInt(1), bytesToHex(stealthMetaAddress)],
+      });
+    } catch (error) {
+      toast.error("Error registering keys in registry");
+      console.error("Error registering keys in registry", error);
+    }
 
     // Redirect to wallet manager page
     router.push("/wallet");
