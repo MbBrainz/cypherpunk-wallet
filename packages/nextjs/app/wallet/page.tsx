@@ -57,7 +57,7 @@ export default function WalletPage() {
     const encryptedKeyfile = localStorage.getItem("encryptedKeyfile");
     const skipUnlock = sessionStorage.getItem("skipUnlock");
     const tempPassword = sessionStorage.getItem("tempWalletPassword");
-    
+
     if (!encryptedKeyfile) {
       router.push("/onboarding");
       return;
@@ -98,7 +98,7 @@ export default function WalletPage() {
   };
 
   // Subscribe to Announcement events
-  const { data: announcements, isLoading: isLoadingAnnouncements } = useScaffoldEventHistory<
+  const { data: announcements, isLoading: isLoadingAnnouncements, refetch: refetchAnnouncements, } = useScaffoldEventHistory<
     "ERC5564Announcer",
     "Announcement",
     false,
@@ -114,6 +114,7 @@ export default function WalletPage() {
   // Process announcements when they arrive
   useEffect(() => {
     if (!announcements) return;
+    console.log("Announcements:", announcements);
 
     const newTransfers: StealthTransfer[] = announcements.map(announcement => {
       const { stealthAddress, ephemeralPubKey, metadata } = announcement.args;
@@ -125,6 +126,7 @@ export default function WalletPage() {
       };
     });
 
+    console.log("New transfers:", newTransfers);
     setStealthTransfers(prev => [...prev, ...newTransfers]);
   }, [announcements]);
 
@@ -147,13 +149,14 @@ export default function WalletPage() {
           const ephemeralPubKey = new Uint8Array(Buffer.from(transfer.ephemeralPubKey.slice(2), "hex"));
 
           // Check if this transfer belongs to us using the fast check with view tags
-          const isOurs = await checkStealthAddressFast(
+          const isOurs = checkStealthAddressFast(
             stealthAddr,
             ephemeralPubKey,
             viewingKey,
             spendingPubKey,
             transfer.viewTag,
           );
+          console.log("Is ours:", isOurs);
 
           return isOurs ? transfer : null;
         }),
@@ -169,7 +172,7 @@ export default function WalletPage() {
     };
 
     scanStealthTransfers();
-  }, [keyfile, stealthTransfers]);
+  }, [keyfile, stealthTransfers, announcements]);
 
   useEffect(() => {
     const fetchEthPrice = async () => {
@@ -234,6 +237,9 @@ export default function WalletPage() {
         <div className="card bg-base-100 shadow-xl">
           <div className="card-body">
             <h2 className="card-title">Private Assets</h2>
+            <button className="btn btn-primary" onClick={refetchAnnouncements}>
+              Refresh
+            </button>
             {/* List private assets */}
           </div>
         </div>
@@ -246,6 +252,56 @@ export default function WalletPage() {
           {/* Transfer interface components */}
         </div>
       </div>
+    <div className="mt-8 card bg-base-100 shadow-xl">
+      <div className="card-body">
+        <h2 className="card-title">My Stealth Transfers</h2>
+        <table className="table w-full">
+          <thead>
+            <tr>
+              <th>Stealth Address</th>
+              <th>Ephemeral Pub Key</th>
+              <th>View Tag</th>
+              <th>Metadata</th>
+            </tr>
+          </thead>
+          <tbody>
+            {validStealthTransfers.map((transfer, index) => (
+              <tr key={index}>
+                <td>{transfer.stealthAddress}</td>
+                <td>{transfer.ephemeralPubKey}</td>
+                <td>{transfer.viewTag}</td>
+                <td>{transfer.metadata}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div className="mt-8 card bg-base-100 shadow-xl">
+      <div className="card-body">
+        <h2 className="card-title">All Stealth Transfers</h2>
+        <table className="table w-full">
+          <thead>
+            <tr>
+              <th>Stealth Address</th>
+              <th>Ephemeral Pub Key</th>
+              <th>View Tag</th>
+              <th>Metadata</th>
+            </tr>
+          </thead>
+          <tbody>
+            {stealthTransfers.map((transfer, index) => (
+              <tr key={index}>
+                <td>{transfer.stealthAddress}</td>
+                <td>{transfer.ephemeralPubKey}</td>
+                <td>{transfer.viewTag}</td>
+                <td>{transfer.metadata}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
     </div>
   );
 }
